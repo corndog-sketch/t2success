@@ -34,7 +34,9 @@
     .subject-tag-item.hsc { background: rgba(11,23,61,0.07); border-color: rgba(11,23,61,0.15); color: var(--text); }
 
     .subjects-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+      gap: 20px;
     }
     .subject-category { min-width: 0; }
 
@@ -81,12 +83,10 @@
     .who-card p { font-size: .875rem; color: var(--muted); line-height: 1.7; }
 
     @media (max-width: 960px) {
-      .subjects-grid { grid-template-columns: 1fr 1fr; }
       .delivery-grid { grid-template-columns: 1fr; }
       .who-grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 720px) {
-      .subjects-grid { grid-template-columns: 1fr; }
       .who-grid { grid-template-columns: 1fr; }
     }
   </style>

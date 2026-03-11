@@ -617,6 +617,8 @@ nav.scrolled {
 .js .features-grid .reveal:nth-child(2) { transition-delay: .08s; }
 .js .features-grid .reveal:nth-child(3) { transition-delay: .16s; }
 .js .features-grid .reveal:nth-child(4) { transition-delay: .24s; }
+.js .features-grid .reveal:nth-child(5) { transition-delay: .32s; }
+.js .features-grid .reveal:nth-child(6) { transition-delay: .40s; }
 .js .steps-grid .reveal:nth-child(2) { transition-delay: .08s; }
 .js .steps-grid .reveal:nth-child(3) { transition-delay: .16s; }
 .js .steps-grid .reveal:nth-child(4) { transition-delay: .24s; }

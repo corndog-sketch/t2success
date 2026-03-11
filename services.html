@@ -34,13 +34,16 @@
     .subject-tag-item.hsc { background: rgba(11,23,61,0.07); border-color: rgba(11,23,61,0.15); color: var(--text); }
 
     .subjects-grid {
-      display: grid;
-      grid-template-columns: 1fr;
+      display: flex;
+      flex-direction: column;
       gap: 20px;
     }
-    .subject-category { min-width: 0; }
+    .subject-category { min-width: 0; width: 100%; box-sizing: border-box; }
     @media (min-width: 960px) {
-      .subjects-grid { grid-template-columns: repeat(3, 1fr); }
+      .subjects-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
 
     .delivery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }

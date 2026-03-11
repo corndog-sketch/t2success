@@ -555,16 +555,15 @@ nav.scrolled {
 /* ── PARENT LOGIN BUTTON ── */
 .btn-portal {
   font-size: .8rem;
-  color: var(--text);
+  color: rgba(255,255,255,0.7);
   padding: 8px 14px;
   white-space: nowrap;
   text-decoration: none;
-  border: 1px solid var(--border);
+  border: 1px solid rgba(255,255,255,0.25);
   border-radius: 6px;
-  opacity: 0.75;
-  transition: opacity .2s, border-color .2s;
+  transition: color .2s, border-color .2s;
 }
-.btn-portal:hover { opacity: 1; border-color: var(--gold); color: var(--gold); }
+.btn-portal:hover { color: var(--gold); border-color: var(--gold); }
 
 /* ── HAMBURGER X ANIMATION ── */
 .nav-hamburger.is-open span:nth-child(1) {

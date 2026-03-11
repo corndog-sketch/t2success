@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ – Tutor 2 Success</title>
+  <meta name="description" content="Frequently asked questions about Tutor 2 Success. Subjects, pricing, WWCC, remote sessions, university tutors and more." />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════ NAV -->
+<nav>
+  <a href="index.html" style="text-decoration:none;display:flex;align-items:center;">
+    <img src="default.png" alt="Tutor 2 Success Logo" style="height:50px;object-fit:contain;"
+         onerror="this.style.display='none';document.getElementById('logo-fb').style.display='flex';" />
+    <div id="logo-fb" class="logo-wrap" style="display:none;">
+      <div class="logo-icon">
+        <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13 5 L5 10 L13 15 L21 10 Z" fill="#0B173D" stroke="#0B173D" stroke-width=".5"/>
+          <path d="M7 12v5c0 2 2.5 4 6 4s6-2 6-4v-5" fill="none" stroke="#0B173D" stroke-width="1.5"/>
+          <line x1="21" y1="10" x2="21" y2="17" stroke="#0B173D" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="logo-wordmark">
+        <div class="logo-name">TUTOR 2 SUCCESS</div>
+        <div class="logo-slogan">Empowering Every Learner</div>
+      </div>
+    </div>
+  </a>
+
+  <div class="nav-links" id="nav-links">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="about.html">About</a>
+    <a href="faq.html" class="active">FAQ</a>
+  </div>
+
+  <div class="nav-actions">
+    <a href="contact.html" class="btn btn-outline" style="padding:9px 20px;font-size:.85rem;">Contact</a>
+    <a href="contact.html" class="btn btn-gold" style="padding:9px 20px;font-size:.85rem;">Book a Session</a>
+    <a href="portal.html" class="btn-portal">Parent Login</a>
+  </div>
+
+  <button type="button" class="nav-hamburger" onclick="document.getElementById('nav-links').classList.toggle('open')" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ══════════════════════════════════════════ PAGE HEADER -->
+<div class="page-header">
+  <div class="eyebrow">Common Questions</div>
+  <h1>FREQUENTLY ASKED <span class="gold">QUESTIONS</span></h1>
+  <p>Everything you need to know before booking. If something is not covered here, send us a message via the contact page and we will get back to you within 24 hours.</p>
+</div>
+
+<!-- ══════════════════════════════════════════ FAQ: SUBJECTS -->
+<section>
+  <div class="section-label center">Subjects and Services</div>
+  <h2 class="center">WHAT WE <span class="gold">OFFER</span></h2>
+  <div class="faq-list" style="margin-top:40px;">
+
+    <div class="faq-item open">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        What subjects do you tutor?
+        <span class="faq-arrow">&#8964;</span>
+      </div>
+      <div class="faq-a">
+        <div class="faq-a-inner">
+          Tutor 2 Success covers a broad range of K-12 subjects across primary and secondary school. Our main areas are:
+          <br/><br/>
+          <strong style="color:#8a6b00;">English:</strong> Primary English, English Standard, English Advanced, and English Extension.
+          <br/><br/>
+          <strong style="color:#8a6b00;">Mathematics:</strong> Primary Maths, Mathematics Standard, Mathematics Advanced, Mathematics Extension 1, and Mathematics Extension 2.
+          <br/><br/>
+          <strong style="color:#8a6b00;">Science:</strong> Primary and Junior Science, Biology, Chemistry, and Physics.
+          <br/><br/>
+          <strong style="color:#8a6b00;">Business and Commerce:</strong> Business Studies, Commerce, and Economics.
+          <br/><br/>
+          <strong style="color:#8a6b00;">Legal Studies and Humanities:</strong> Legal Studies, Ancient History, Modern History, and Geography.
+          <br/><br/>
+          <strong style="color:#8a6b00;">Computing and Technology:</strong> Computing Technology, Information and Digital Technology, and Software Design and Development.
+          <br/><br/>
+          If your subject is not listed above, contact us and we will let you know whether we can help or refer you on.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Do you tutor primary school students?
+        <span class="faq-arrow">&#8964;</span>
+      </div>
+      <div class="faq-a">
+        <div class="faq-a-inner">
+          Yes. We work with students from Kindergarten through to Year 12. For primary school students, sessions focus on building strong foundations in Maths and English, including reading, writing, comprehension, and numeracy. Early support in these areas makes a significant difference to secondary school readiness.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Do you tutor in-person or online?
+        <span class="faq-arrow">&#8964;</span>
+      </div>
+      <div class="faq-a">
+        <div class="faq-a-inner">
+          Both. In-person sessions are available for students in and around Wagga Wagga. We come to you. Tutor 2 Success does not have a fixed office, so sessions happen at your home or a mutually agreed location. Remote sessions are available for students anywhere in regional NSW, delivered via Zoom or Google Meet with a shared digital whiteboard so tutors and students can work through problems together in real time. Remote sessions are priced the same as in-person sessions.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        What areas do you cover for in-person sessions?
+        <span class="faq-arrow">&#8964;</span>
+      </div>
+      <div class="faq-a">
+        <div class="faq-a-inner">
+          In-person sessions are available in Wagga Wagga and the immediate surrounds. We come to your home or a mutually agreed location. For students further afield, including Young, Griffith, Albury, Deniliquin, and the broader Riverina region, we recommend remote sessions, which are equally effective and available to anyone with a stable internet connection.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section-label center" style="margin-top:60px;">Our Tutors</div>
+  <h2 class="center">THE <span class="gold">TUTORS</span></h2>
+  <div class="faq-list" style="margin-top:40px;">
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Who are the tutors? Is it always Alex?
+        <span class="faq-arrow">&#8964;</span>
+      </div>
+      <div class="faq-a">
+        <div class="faq-a-inner">
+          Tutor 2 Success is led by Alex Corneliusen, who takes on students directly based on availability. We also work with a small network of carefully selected university tutors, all high-achieving local university students. Every tutor is personally selected by Alex, subject-matched, and holds a current Working With Children Check. During your initial chat, Alex will let you know whether he has availability or whether one of our university tutors would be the right fit. Either way, Alex remains your point of contact throughout.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Do the tutors have Working With Children Checks?
+        <span class="faq-arrow">&#8964;</span>
+      </div>
+      <div class="faq-a">
+        <div class="faq-a-inner">
+          Yes, without exception. Every tutor who delivers sessions through Tutor 2 Success, including all university tutors, holds a current, valid Working With Children Check (WWCC). This is a non-negotiable requirement. If you would like to see documentation for your student's tutor, just ask Alex and he will provide it.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Can I request Alex specifically?
+        <span class="faq-arrow">&#8964;</span>
+      </div>
+      <div class="faq-a">
+        <div class="faq-a-inner">
+          You can request Alex directly, and we will do our best to accommodate based on availability. For sessions with a university tutor, we match based on subject, year level, and fit. If after your trial session you would prefer a different tutor, just let us know and we will sort out an alternative.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section-label center" style="margin-top:60px;">Pricing and Booking</div>
+  <h2 class="center">COST AND <span class="gold">BOOKING</span></h2>
+  <div class="faq-list" style="margin-top:40px;">
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        How much does tutoring cost?
+        <span class="faq-arrow">&#8964;</span>
+      </div>
+      <div class="faq-a">
+        <div class="faq-a-inner">
+          Sessions with Alex are $75 per hour. Sessions with one of our university tutors are $60 per hour. Small group sessions (maximum 3 students) are $45 per student per hour. Holiday workshops start from $85 per student. Your first session is 50% off as an introductory trial. Please visit our <a href="pricing.html" style="color:var(--gold);">Pricing page</a> for a full breakdown, or <a href="contact.html" style="color:var(--gold);">contact Alex</a> for a specific quote.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Is there a lock-in contract?
+        <span class="faq-arrow">&#8964;</span>
+      </div>
+      <div class="faq-a">
+        <div class="faq-a-inner">
+          No. There is no lock-in contract and no minimum number of sessions. You can book session by session if you prefer, though most families find a regular weekly schedule delivers the best outcomes. You are free to pause or stop at any time with reasonable notice to Alex.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        What is the introductory trial session offer?
+        <span class="faq-arrow">&#8964;</span>
+      </div>
+      <div class="faq-a">
+        <div class="faq-a-inner">
+          Your first session with Tutor 2 Success is 50% off the standard rate. This applies to new students only, regardless of which tutor delivers the session. It gives you a chance to experience the Tutor 2 Success approach before committing to ongoing sessions. Just mention the trial offer when you enquire and we will apply it to your first booking.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        How do I pay?
+        <span class="faq-arrow">&#8964;</span>
+      </div>
+      <div class="faq-a">
+        <div class="faq-a-inner">
+          Invoices are issued through our session management platform and sent to you by email. We accept standard electronic payment methods. Payment details are confirmed at booking. We do not require cash or cheque payments.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        What is the cancellation policy?
+        <span class="faq-arrow">&#8964;</span>
+      </div>
+      <div class="faq-a">
+        <div class="faq-a-inner">
+          We understand that life happens. We ask for reasonable advance notice if you need to reschedule or cancel a session. Our full cancellation policy is provided at booking confirmation. Late cancellations with insufficient notice may be subject to a partial charge at our discretion.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section-label center" style="margin-top:60px;">Session Format</div>
+  <h2 class="center">ABOUT <span class="gold">SESSIONS</span></h2>
+  <div class="faq-list" style="margin-top:40px;">
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        What is the difference between group and individual sessions?
+        <span class="faq-arrow">&#8964;</span>
+      </div>
+      <div class="faq-a">
+        <div class="faq-a-inner">
+          Individual sessions are one student with one tutor, entirely focused on that student's needs. Group sessions have a maximum of three students from the same year level and subject, and are priced at a lower per-student rate. Group sessions are a good option for students who learn well alongside peers and want a more affordable option, but they do mean the tutor's attention is shared across the group.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        How do online sessions work technically?
+        <span class="faq-arrow">&#8964;</span>
+      </div>
+      <div class="faq-a">
+        <div class="faq-a-inner">
+          Remote sessions are delivered via Zoom or Google Meet. Both tutor and student use a shared digital whiteboard, which allows them to write, annotate, and solve problems together in real time, just as they would with paper in person. Students need a stable internet connection, a device with a camera and microphone, and ideally a stylus or the ability to type. We will walk you through the setup before your first remote session if needed.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Will I receive updates on my child's progress?
+        <span class="faq-arrow">&#8964;</span>
+      </div>
+      <div class="faq-a">
+        <div class="faq-a-inner">
+          Yes. After every session, the tutor produces written session notes covering what was covered during the lesson, any homework or practice tasks assigned, and any topics flagged for extra attention. These notes are shared with the parent or guardian. Alex also stays in touch throughout and is always available if you have a concern or question between sessions.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        How long are sessions?
+        <span class="faq-arrow">&#8964;</span>
+      </div>
+      <div class="faq-a">
+        <div class="faq-a-inner">
+          Standard sessions are one hour. Longer sessions can be arranged for intensive exam preparation or holiday workshops. The ideal session length for your student will be discussed during the initial chat with Alex, as younger students often benefit from shorter sessions while senior students working through complex HSC content often prefer longer ones.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="text-align:center; margin-top: 52px;">
+    <p style="color:var(--muted);font-size:.9rem;margin-bottom:20px;">Still have a question not covered above?</p>
+    <a href="contact.html" class="btn btn-gold btn-lg">Send Alex a Message</a>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ CTA -->
+<div class="cta-strip">
+  <h2>READY TO <span class="gold">BOOK?</span></h2>
+  <p>Start with a free initial chat. No obligation, no pressure. Just a conversation with Alex.</p>
+  <div class="cta-btns">
+    <a href="contact.html" class="btn btn-gold btn-lg">Get in Touch</a>
+    <a href="how-it-works.html" class="btn btn-outline btn-lg">How It Works</a>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════ FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="default.png" alt="Tutor 2 Success" style="height:38px;object-fit:contain;margin-bottom:12px;filter:brightness(0) invert(1);" />
+      <p>Quality K-12 tutoring for Wagga Wagga and regional NSW students. In-person (we come to you) and remote sessions with qualified, WWCC-verified university tutors.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Pages</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Subjects</h5>
+      <ul>
+        <li><a href="services.html">English</a></li>
+        <li><a href="services.html">Mathematics</a></li>
+        <li><a href="services.html">Science</a></li>
+        <li><a href="services.html">Business Studies</a></li>
+        <li><a href="services.html">Legal Studies</a></li>
+        <li><a href="services.html">Computing</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="contact.html">Book a Session</a></li>
+        <li><a href="contact.html">Send an Enquiry</a></li>
+        <li><a href="mailto:hello@tutor2success.com.au">hello@tutor2success.com.au</a></li>
+        <li><span style="color:rgba(255,255,255,0.4);">Wagga Wagga, NSW</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Tutor 2 Success. Wagga Wagga, NSW. All rights reserved.</span>
+    <span>K-12 Tutoring. In-person and Remote.</span>
+  </div>
+</footer>
+
+<script>
+  function toggleFaq(el) {
+    var item = el.parentElement;
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(function(i) { i.classList.remove('open'); });
+    if (!isOpen) item.classList.add('open');
+  }
+</script>
+
+<script src="scripts.js"></script>
+</body>
+</html>

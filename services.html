@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutoring Services – Tutor 2 Success</title>
+  <meta name="description" content="K-12 tutoring services in Wagga Wagga and regional NSW. English, Maths, Science, Business Studies, Legal Studies, Computing, Commerce and more. One-on-one, small group, holiday workshops and remote sessions." />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .subjects-section { background: var(--panel); }
+
+    .subject-category {
+      background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 26px 24px; box-shadow: var(--shadow);
+      transition: border-color .2s, transform .2s;
+    }
+    .subject-category:hover { border-color: var(--gold); transform: translateY(-2px); }
+    .subject-category-label {
+      font-family: var(--font-head); font-size: .8rem; letter-spacing: 2px;
+      color: #8a6b00; text-transform: uppercase; margin-bottom: 4px;
+    }
+    .subject-category h4 {
+      font-family: var(--font-head); font-size: 1.15rem; letter-spacing: 1px;
+      color: var(--text); margin-bottom: 14px;
+      padding-bottom: 12px; border-bottom: 1px solid var(--border);
+    }
+    .subject-tags { display: flex; gap: 7px; flex-wrap: wrap; }
+    .subject-tag-item {
+      background: var(--gold-pale); border: 1px solid var(--border);
+      color: #7a5f00; font-size: .78rem; font-weight: 600;
+      padding: 4px 12px; border-radius: 20px;
+    }
+    .subject-tag-item.hsc { background: rgba(11,23,61,0.07); border-color: rgba(11,23,61,0.15); color: var(--text); }
+
+    .subjects-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+    }
+
+    .delivery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    .delivery-card {
+      background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 36px 32px; position: relative; overflow: hidden;
+      box-shadow: var(--shadow); transition: border-color .2s, transform .2s;
+    }
+    .delivery-card:hover { border-color: var(--gold); transform: translateY(-3px); }
+    .delivery-card::before {
+      content: ''; position: absolute; top: -40px; right: -40px;
+      width: 120px; height: 120px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(209,161,3,.1) 0%, transparent 70%);
+    }
+    .delivery-icon { font-size: 2.4rem; margin-bottom: 18px; }
+    .delivery-card h3 { font-family: var(--font-head); font-size: 1.5rem; letter-spacing: 1px; color: var(--text); margin-bottom: 12px; }
+    .delivery-card p { font-size: .9rem; color: var(--muted); line-height: 1.75; margin-bottom: 20px; }
+    .delivery-list { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .delivery-list li { display: flex; align-items: flex-start; gap: 10px; font-size: .875rem; color: var(--muted); line-height: 1.5; }
+    .delivery-list li::before { content: '✦'; color: var(--gold); font-size: .65rem; flex-shrink: 0; margin-top: 3px; }
+
+    .regions-bar {
+      background: var(--gold-pale); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 20px 28px;
+      display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+      margin-top: 32px;
+    }
+    .regions-bar strong { font-family: var(--font-head); font-size: .9rem; letter-spacing: 1px; color: #8a6b00; white-space: nowrap; }
+    .region-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+    .region-tag {
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: 20px; padding: 4px 14px;
+      font-size: .8rem; color: var(--muted);
+    }
+
+    .who-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .who-card {
+      background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 28px 24px; box-shadow: var(--shadow); transition: border-color .2s;
+    }
+    .who-card:hover { border-color: var(--gold); }
+    .who-card h3 { font-family: var(--font-head); font-size: 1.15rem; letter-spacing: 1px; color: var(--text); margin-bottom: 10px; }
+    .who-card p { font-size: .875rem; color: var(--muted); line-height: 1.7; }
+
+    @media (max-width: 960px) {
+      .subjects-grid { grid-template-columns: 1fr 1fr; }
+      .delivery-grid { grid-template-columns: 1fr; }
+      .who-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 620px) {
+      .subjects-grid { grid-template-columns: 1fr; }
+      .who-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════ NAV -->
+<nav>
+  <a href="index.html" style="text-decoration:none;display:flex;align-items:center;">
+    <img src="default.png" alt="Tutor 2 Success Logo" style="height:50px;object-fit:contain;"
+         onerror="this.style.display='none';document.getElementById('logo-fb').style.display='flex';" />
+    <div id="logo-fb" class="logo-wrap" style="display:none;">
+      <div class="logo-icon">
+        <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13 5 L5 10 L13 15 L21 10 Z" fill="#0B173D" stroke="#0B173D" stroke-width=".5"/>
+          <path d="M7 12v5c0 2 2.5 4 6 4s6-2 6-4v-5" fill="none" stroke="#0B173D" stroke-width="1.5"/>
+          <line x1="21" y1="10" x2="21" y2="17" stroke="#0B173D" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="logo-wordmark">
+        <div class="logo-name">TUTOR 2 SUCCESS</div>
+        <div class="logo-slogan">Empowering Every Learner</div>
+      </div>
+    </div>
+  </a>
+
+  <div class="nav-links" id="nav-links">
+    <a href="index.html">Home</a>
+    <a href="services.html" class="active">Services</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="about.html">About</a>
+    <a href="faq.html">FAQ</a>
+  </div>
+
+  <div class="nav-actions">
+    <a href="contact.html" class="btn btn-outline" style="padding:9px 20px;font-size:.85rem;">Contact</a>
+    <a href="contact.html" class="btn btn-gold" style="padding:9px 20px;font-size:.85rem;">Book a Session</a>
+    <a href="portal.html" class="btn-portal">Parent Login</a>
+  </div>
+
+  <button type="button" class="nav-hamburger" onclick="document.getElementById('nav-links').classList.toggle('open')" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ══════════════════════════════════════════ PAGE HEADER -->
+<div class="page-header">
+  <div class="eyebrow">What We Offer</div>
+  <h1>TUTORING <span class="gold">SERVICES</span></h1>
+  <p>Expert, personalised K-12 tutoring across a broad range of subjects, delivered in-person at your home or remotely, designed around your student's needs and schedule.</p>
+</div>
+
+<!-- ══════════════════════════════════════════ SUBJECTS -->
+<section class="subjects-section">
+  <div class="section-label center">Subjects Covered</div>
+  <h2>K-12 <span class="gold">SUBJECTS WE COVER</span></h2>
+  <p class="section-intro">Tutor 2 Success covers a broad range of K-12 subjects across primary and secondary school. Our tutors are high-achieving university students matched to their area of expertise.</p>
+  <div class="subjects-grid">
+
+    <div class="subject-category">
+      <div class="subject-category-label">All Years</div>
+      <h4>&#128214; English</h4>
+      <div class="subject-tags">
+        <span class="subject-tag-item">Primary English</span>
+        <span class="subject-tag-item hsc">English Standard</span>
+        <span class="subject-tag-item hsc">English Advanced</span>
+        <span class="subject-tag-item hsc">English Extension</span>
+      </div>
+    </div>
+
+    <div class="subject-category">
+      <div class="subject-category-label">All Years</div>
+      <h4>&#128290; Mathematics</h4>
+      <div class="subject-tags">
+        <span class="subject-tag-item">Primary Maths</span>
+        <span class="subject-tag-item hsc">Mathematics Standard</span>
+        <span class="subject-tag-item hsc">Mathematics Advanced</span>
+        <span class="subject-tag-item hsc">Extension 1</span>
+        <span class="subject-tag-item hsc">Extension 2</span>
+      </div>
+    </div>
+
+    <div class="subject-category">
+      <div class="subject-category-label">All Years</div>
+      <h4>&#128300; Science</h4>
+      <div class="subject-tags">
+        <span class="subject-tag-item">Primary Science</span>
+        <span class="subject-tag-item hsc">Biology</span>
+        <span class="subject-tag-item hsc">Chemistry</span>
+        <span class="subject-tag-item hsc">Physics</span>
+      </div>
+    </div>
+
+    <div class="subject-category">
+      <div class="subject-category-label">Secondary</div>
+      <h4>&#128188; Business and Commerce</h4>
+      <div class="subject-tags">
+        <span class="subject-tag-item hsc">Business Studies</span>
+        <span class="subject-tag-item hsc">Commerce</span>
+        <span class="subject-tag-item hsc">Economics</span>
+      </div>
+    </div>
+
+    <div class="subject-category">
+      <div class="subject-category-label">Secondary</div>
+      <h4>&#9878; Legal Studies and Humanities</h4>
+      <div class="subject-tags">
+        <span class="subject-tag-item hsc">Legal Studies</span>
+        <span class="subject-tag-item hsc">Ancient History</span>
+        <span class="subject-tag-item hsc">Modern History</span>
+        <span class="subject-tag-item hsc">Geography</span>
+      </div>
+    </div>
+
+    <div class="subject-category">
+      <div class="subject-category-label">Secondary</div>
+      <h4>&#128187; Computing and Technology</h4>
+      <div class="subject-tags">
+        <span class="subject-tag-item hsc">Computing Technology</span>
+        <span class="subject-tag-item hsc">Information and Digital Technology</span>
+        <span class="subject-tag-item hsc">Software Design and Development</span>
+      </div>
+    </div>
+
+    <div class="subject-category" style="grid-column: span 2; background: var(--gold-pale); border-color: var(--gold);">
+      <div class="subject-category-label" style="color:var(--gold);">All Year Levels</div>
+      <h4 style="color:var(--text);">&#128203; Study Skills and Timetable Planning</h4>
+      <div class="subject-tags">
+        <span class="subject-tag-item">Exam preparation</span>
+        <span class="subject-tag-item">Study scheduling</span>
+        <span class="subject-tag-item">Goal setting</span>
+        <span class="subject-tag-item">All year levels</span>
+      </div>
+    </div>
+
+    <div class="subject-category" style="background: rgba(11,23,61,0.05); border-style: dashed;">
+      <div class="subject-category-label">Enquire</div>
+      <h4>&#128172; Other Subjects</h4>
+      <p style="font-size:.84rem;color:var(--muted);line-height:1.6;">Not listed? Contact us and we will let you know whether we can help or refer you on.</p>
+    </div>
+
+  </div>
+</section>
+
+<hr class="gold-divider"/>
+
+<!-- ══════════════════════════════════════════ SERVICE TYPES -->
+<section>
+  <div class="section-label center">Session Formats</div>
+  <h2>HOW WE <span class="gold">TUTOR</span></h2>
+  <p class="section-intro">Every student is different. We offer four session formats to suit different learning styles, budgets, and goals.</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="feat-icon" style="margin-bottom:16px;">&#128100;</div>
+      <h3>ONE-ON-ONE TUTORING</h3>
+      <p>The core Tutor 2 Success experience. A single student working with a tutor, entirely focused on their specific needs, gaps, and goals. Sessions are tailored to the individual, not a pre-packaged program.</p>
+      <p>Available with Alex directly, or with one of our screened university tutors based on availability and subject fit. We personally match every student.</p>
+      <div class="service-tags">
+        <span class="service-tag">All K-12 subjects</span>
+        <span class="service-tag">Primary to HSC</span>
+        <span class="service-tag">In-person or remote</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="feat-icon" style="margin-bottom:16px;">&#128101;</div>
+      <h3>SMALL GROUP SESSIONS</h3>
+      <p>Group sessions are capped at a maximum of three students from the same year level and subject. This keeps the group genuinely small, so everyone still gets attention, questions answered, and personal feedback.</p>
+      <p>Group sessions are priced at a lower per-student rate than individual sessions, making them a great option for friends or students at the same school.</p>
+      <div class="service-tags">
+        <span class="service-tag">Max 3 students</span>
+        <span class="service-tag">Same year and subject</span>
+        <span class="service-tag">Lower per-student rate</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="feat-icon" style="margin-bottom:16px;">&#127973;</div>
+      <h3>HOLIDAY WORKSHOPS</h3>
+      <p>Intensive sessions run during school holiday periods, designed to consolidate term content, tackle weak areas, or get ahead before exams. Available in group format at a per-student rate.</p>
+      <p>Workshop dates are published each term. Enquire via the contact form to register your interest.</p>
+      <div class="service-tags">
+        <span class="service-tag">School holidays</span>
+        <span class="service-tag">Exam prep focus</span>
+        <span class="service-tag">Group rate</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="feat-icon" style="margin-bottom:16px;">&#128203;</div>
+      <h3>STUDY TIMETABLE AND PLANNING</h3>
+      <p>Structured support to help students build a realistic and effective study schedule. We work with the student to map out their upcoming commitments, identify priority topics, and plan their revision so nothing is left to the last minute.</p>
+      <p>Can be done as a standalone session or integrated into regular tutoring.</p>
+      <div class="service-tags">
+        <span class="service-tag">All year levels</span>
+        <span class="service-tag">Exam preparation</span>
+        <span class="service-tag">Trial period planning</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="gold-divider"/>
+
+<!-- ══════════════════════════════════════════ DELIVERY MODES -->
+<section style="background: var(--panel);">
+  <div class="section-label center">How We Deliver</div>
+  <h2>WE COME TO YOU <span class="gold">OR REMOTE</span></h2>
+  <p class="section-intro">Tutor 2 Success does not have a fixed office. In-person sessions happen at your home or a mutually agreed location. Remote students connect via Zoom from anywhere in regional NSW.</p>
+  <div class="delivery-grid">
+    <div class="delivery-card">
+      <div class="delivery-icon">&#127968;</div>
+      <h3>IN-PERSON SESSIONS</h3>
+      <p>We come to you. In-person sessions take place at your home or a mutually agreed location in Wagga Wagga. No need to travel.</p>
+      <ul class="delivery-list">
+        <li>Direct, hands-on support, great for working through problems step by step</li>
+        <li>Immediate feedback on written working and exam technique</li>
+        <li>Builds a strong tutor-student rapport for sustained progress</li>
+        <li>Available for students in and around Wagga Wagga</li>
+      </ul>
+    </div>
+    <div class="delivery-card">
+      <div class="delivery-icon">&#128187;</div>
+      <h3>REMOTE SESSIONS</h3>
+      <p>Delivered via Zoom or Google Meet with a shared digital whiteboard, so students can see working, mark up problems, and collaborate in real time, just as they would in person.</p>
+      <ul class="delivery-list">
+        <li>Full digital whiteboard, tutors and students write, draw, and solve together</li>
+        <li>Sessions recorded on request for student review</li>
+        <li>Available to students anywhere in regional NSW</li>
+        <li>Same price as in-person, no remote surcharge</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="regions-bar">
+    <strong>REGIONS SERVED:</strong>
+    <div class="region-tags">
+      <span class="region-tag">Wagga Wagga</span>
+      <span class="region-tag">Young</span>
+      <span class="region-tag">Griffith</span>
+      <span class="region-tag">Albury</span>
+      <span class="region-tag">Deniliquin</span>
+      <span class="region-tag">Riverina and surrounds</span>
+    </div>
+  </div>
+</section>
+
+<hr class="gold-divider"/>
+
+<!-- ══════════════════════════════════════════ WHO IT SUITS -->
+<section>
+  <div class="section-label center">Is This Right For You?</div>
+  <h2>WHO Tutor 2 Success <span class="gold">SUITS</span></h2>
+  <p class="section-intro">We work best with students who are motivated to improve and families who want clear, honest communication about progress.</p>
+  <div class="who-grid">
+    <div class="who-card">
+      <h3>THE STUDENT FALLING BEHIND</h3>
+      <p>Whether it is English essays, algebra, or Legal Studies, we diagnose the gap and work through it systematically, not just reteach the same thing in the same way.</p>
+    </div>
+    <div class="who-card">
+      <h3>THE STUDENT AIMING HIGH</h3>
+      <p>Students targeting Band 6 results or a high ATAR need more than classroom instruction. We go deeper into the subject, work on harder problems, and build the exam technique that separates top marks from good marks.</p>
+    </div>
+    <div class="who-card">
+      <h3>THE STUDENT BUILDING CONFIDENCE</h3>
+      <p>Some students know more than they think. They just lack confidence. We focus on building a solid foundation, reinforcing what they already know, and gradually tackling harder content as their confidence grows.</p>
+    </div>
+    <div class="who-card">
+      <h3>REGIONAL STUDENTS</h3>
+      <p>Distance should not limit access to quality tutoring. Our remote sessions are designed to be just as effective as in-person, and we understand the pressures facing students in regional NSW.</p>
+    </div>
+    <div class="who-card">
+      <h3>PARENTS WANTING VISIBILITY</h3>
+      <p>Session notes are kept after every lesson, so you will always know what was covered, what homework was set, and how your child is tracking. We are always available if you have a question between sessions.</p>
+    </div>
+    <div class="who-card">
+      <h3>FAMILIES ON A BUDGET</h3>
+      <p>We price below the big tutoring chains deliberately. The 50%-off trial session means you can test the fit before committing, with no lock-in contract required.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ CTA -->
+<div class="cta-strip">
+  <h2>FIND THE RIGHT <span class="gold">SESSION FORMAT</span></h2>
+  <p>Not sure which service suits your student? Get in touch and we will have a free chat to recommend the right fit.</p>
+  <div class="cta-btns">
+    <a href="contact.html" class="btn btn-gold btn-lg">Enquire Now</a>
+    <a href="pricing.html" class="btn btn-outline btn-lg">View Pricing</a>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════ FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="default.png" alt="Tutor 2 Success" style="height:38px;object-fit:contain;margin-bottom:12px;filter:brightness(0) invert(1);" />
+      <p>Quality K-12 tutoring for Wagga Wagga and regional NSW students. In-person (we come to you) and remote sessions with qualified, WWCC-verified university tutors.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Pages</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Subjects</h5>
+      <ul>
+        <li><a href="services.html">English</a></li>
+        <li><a href="services.html">Mathematics</a></li>
+        <li><a href="services.html">Science</a></li>
+        <li><a href="services.html">Business Studies</a></li>
+        <li><a href="services.html">Legal Studies</a></li>
+        <li><a href="services.html">Computing</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="contact.html">Book a Session</a></li>
+        <li><a href="contact.html">Send an Enquiry</a></li>
+        <li><a href="mailto:hello@tutor2success.com.au">hello@tutor2success.com.au</a></li>
+        <li><span style="color:rgba(255,255,255,0.4);">Wagga Wagga, NSW</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Tutor 2 Success. Wagga Wagga, NSW. All rights reserved.</span>
+    <span>K-12 Tutoring. In-person and Remote.</span>
+  </div>
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>

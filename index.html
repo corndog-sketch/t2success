@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutor 2 Success | K-12 Tutoring | Wagga Wagga</title>
+  <meta name="description" content="K-12 tutoring in Wagga Wagga and regional NSW. English, Maths, Science, Business Studies, Legal Studies, Computing and more. In-person (we come to you) and remote sessions. Book your trial today." />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── HOME HERO ── */
+    .hero {
+      min-height: 88vh;
+      background: linear-gradient(135deg, #060E28 0%, #0B173D 50%, #0d1e4a 100%);
+      padding: 80px 5% 70px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; top: -120px; right: 5%;
+      width: 520px; height: 520px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(209,161,3,.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: ''; position: absolute; bottom: -80px; left: -80px;
+      width: 300px; height: 300px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(209,161,3,.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(209,161,3,0.15); border: 1px solid rgba(209,161,3,0.3);
+      color: var(--gold-lt); padding: 6px 16px; border-radius: 24px;
+      font-size: .8rem; font-weight: 600; letter-spacing: .5px;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-family: var(--font-head);
+      font-size: 4rem; letter-spacing: 3px;
+      color: #ffffff; line-height: 1.05; margin-bottom: 8px;
+    }
+    .hero h1 .gold { color: var(--gold); }
+    .hero-sub {
+      font-family: var(--font-slogan);
+      font-size: 1.15rem; font-style: italic;
+      color: var(--gold-lt); margin-bottom: 20px; letter-spacing: .5px;
+    }
+    .hero p {
+      font-size: 1rem; line-height: 1.75; color: rgba(255,255,255,0.7);
+      max-width: 480px; margin-bottom: 36px;
+    }
+    .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    /* ── HERO RIGHT: PHOTO ── */
+    .hero-visual {
+      border-radius: 16px; overflow: hidden; position: relative;
+      box-shadow: 0 24px 64px rgba(0,0,0,.55), 0 0 0 1px rgba(209,161,3,.2);
+      transform: perspective(1200px) rotateY(-4deg) rotateX(2deg);
+      min-height: 440px;
+    }
+    .hero-photo {
+      width: 100%; height: 100%; object-fit: cover;
+      display: block; min-height: 440px;
+    }
+    .hero-photo-overlay {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: linear-gradient(to top, rgba(6,14,40,.95) 0%, rgba(6,14,40,.5) 55%, transparent 100%);
+      padding: 36px 24px 22px;
+    }
+    .hero-photo-stats {
+      display: grid; grid-template-columns: repeat(3,1fr);
+    }
+    .hero-photo-stat { text-align: center; padding: 0 8px; }
+    .hero-photo-stat + .hero-photo-stat { border-left: 1px solid rgba(255,255,255,.15); }
+    .hero-photo-stat strong {
+      display: block; font-family: var(--font-head);
+      font-size: 1.6rem; color: var(--gold); letter-spacing: 1px; line-height: 1;
+    }
+    .hero-photo-stat span { font-size: .68rem; color: rgba(255,255,255,.65); margin-top: 5px; display: block; }
+    .hero-photo-badge {
+      position: absolute; top: 16px; right: 16px;
+      background: rgba(6,14,40,.88); border: 1px solid rgba(209,161,3,.45);
+      border-radius: 8px; padding: 8px 13px;
+      display: flex; align-items: center; gap: 7px;
+    }
+    .hero-photo-badge-check { color: var(--gold); font-size: .9rem; font-weight: 700; }
+    .hero-photo-badge-text { font-size: .74rem; font-weight: 700; color: #fff; letter-spacing: .3px; }
+
+    /* ── FROM ALEX SECTION ── */
+    .from-alex-layout {
+      display: grid; grid-template-columns: 400px 1fr; gap: 72px; align-items: center;
+    }
+    .from-alex-photo-wrap { position: relative; }
+    .from-alex-photo {
+      width: 100%; border-radius: 16px; display: block;
+      object-fit: cover; object-position: center top;
+      max-height: 520px;
+      box-shadow: 0 16px 48px rgba(0,0,0,.12);
+    }
+    .from-alex-photo-tag {
+      position: absolute; bottom: 20px; left: 20px; right: 20px;
+      background: rgba(6,14,40,.88); border: 1px solid rgba(209,161,3,.35);
+      border-radius: 10px; padding: 14px 18px;
+    }
+    .from-alex-photo-tag-name {
+      display: block; font-family: var(--font-head); font-size: 1rem;
+      letter-spacing: 1.5px; color: var(--gold); line-height: 1;
+    }
+    .from-alex-photo-tag-role {
+      display: block; font-size: .74rem; color: rgba(255,255,255,.6); margin-top: 4px;
+    }
+    .from-alex-text p { font-size: .95rem; color: var(--muted); line-height: 1.8; margin-bottom: 18px; }
+    .from-alex-sig { margin: 28px 0 24px; padding-top: 22px; border-top: 1px solid var(--border); }
+    .from-alex-sig-name {
+      display: block; font-family: var(--font-head); font-size: 1.2rem;
+      letter-spacing: 1.5px; color: var(--text); line-height: 1;
+    }
+    .from-alex-sig-role { display: block; font-size: .8rem; color: var(--muted); margin-top: 5px; }
+
+    @media (max-width: 960px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-visual { display: none; }
+      .hero h1 { font-size: 3rem; }
+      .from-alex-layout { grid-template-columns: 1fr; gap: 36px; }
+      .from-alex-photo-wrap { max-width: 400px; }
+    }
+    @media (max-width: 480px) {
+      .hero { padding: 60px 5% 52px; }
+      .hero h1 { font-size: 2.4rem; }
+    }
+
+    .features-section { background: var(--panel); }
+    .trust-section { background: #060E28; }
+    .trust-section .section-label { color: var(--gold-lt); background: rgba(209,161,3,0.15); border-color: rgba(209,161,3,0.25); }
+    .trust-section h2 { color: #ffffff; }
+    .trust-section .section-intro { color: rgba(255,255,255,0.6); }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════ NAV -->
+<nav>
+  <a href="index.html" style="text-decoration:none;display:flex;align-items:center;">
+    <img src="default.png" alt="Tutor 2 Success Logo" style="height:50px;object-fit:contain;"
+         onerror="this.style.display='none';document.getElementById('logo-fb').style.display='flex';" />
+    <div id="logo-fb" class="logo-wrap" style="display:none;">
+      <div class="logo-icon">
+        <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13 5 L5 10 L13 15 L21 10 Z" fill="#0B173D" stroke="#0B173D" stroke-width=".5"/>
+          <path d="M7 12v5c0 2 2.5 4 6 4s6-2 6-4v-5" fill="none" stroke="#0B173D" stroke-width="1.5"/>
+          <line x1="21" y1="10" x2="21" y2="17" stroke="#0B173D" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="logo-wordmark">
+        <div class="logo-name">TUTOR 2 SUCCESS</div>
+        <div class="logo-slogan">Empowering Every Learner</div>
+      </div>
+    </div>
+  </a>
+
+  <div class="nav-links" id="nav-links">
+    <a href="index.html" class="active">Home</a>
+    <a href="services.html">Services</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="about.html">About</a>
+    <a href="faq.html">FAQ</a>
+  </div>
+
+  <div class="nav-actions">
+    <a href="contact.html" class="btn btn-outline" style="padding:9px 20px;font-size:.85rem;">Contact</a>
+    <a href="contact.html" class="btn btn-gold" style="padding:9px 20px;font-size:.85rem;">Book a Session</a>
+    <a href="portal.html" class="btn-portal">Parent Login</a>
+  </div>
+
+  <button class="nav-hamburger" onclick="document.getElementById('nav-links').classList.toggle('open')" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ══════════════════════════════════════════ HERO -->
+<section class="hero">
+  <div>
+    <div class="hero-eyebrow">K-12 Tutoring &nbsp;&#183;&nbsp; Wagga Wagga &amp; Regional NSW</div>
+    <h1>THE LOCAL TUTOR<br/>WHO <span class="gold">COMES TO YOU</span></h1>
+    <p style="font-size:.95rem;color:rgba(255,255,255,0.55);font-weight:600;letter-spacing:.5px;margin-bottom:18px;">Personalised K-12 tutoring. Alex handles everything personally.</p>
+    <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:32px;max-width:460px;">
+      <li style="display:flex;align-items:center;gap:10px;font-size:.93rem;color:rgba(255,255,255,0.82);">
+        <span style="color:var(--gold);font-size:.75rem;flex-shrink:0;">&#9646;</span>
+        English, Maths, Science, Business, Legal Studies, Computing and more
+      </li>
+      <li style="display:flex;align-items:center;gap:10px;font-size:.93rem;color:rgba(255,255,255,0.82);">
+        <span style="color:var(--gold);font-size:.75rem;flex-shrink:0;">&#9646;</span>
+        We come to your home in Wagga Wagga, or connect via Zoom anywhere in regional NSW
+      </li>
+      <li style="display:flex;align-items:center;gap:10px;font-size:.93rem;color:rgba(255,255,255,0.82);">
+        <span style="color:var(--gold);font-size:.75rem;flex-shrink:0;">&#9646;</span>
+        WWCC-verified tutors, personally matched by Alex. No lock-in contracts.
+      </li>
+    </ul>
+    <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(209,161,3,0.18);border:1px solid rgba(209,161,3,0.35);border-radius:8px;padding:10px 16px;margin-bottom:28px;">
+      <span style="color:var(--gold);font-size:1.1rem;">&#9733;</span>
+      <span style="font-size:.85rem;font-weight:700;color:var(--gold-lt);">First session 50% off</span>
+      <span style="font-size:.8rem;color:rgba(255,255,255,0.5);">No commitment required</span>
+    </div>
+    <div class="hero-ctas">
+      <a href="contact.html" class="btn btn-gold btn-lg btn-gold-pulse">Book Your Trial Session</a>
+      <a href="how-it-works.html" class="btn btn-light btn-lg">See How It Works</a>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <img
+      src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=700&q=80"
+      alt="Tutor working one-on-one with a student"
+      class="hero-photo"
+    />
+    <div class="hero-photo-badge">
+      <span class="hero-photo-badge-check">&#10003;</span>
+      <span class="hero-photo-badge-text">WWCC Verified Tutors</span>
+    </div>
+    <div class="hero-photo-overlay">
+      <div class="hero-photo-stats">
+        <div class="hero-photo-stat">
+          <strong>50%</strong>
+          <span>Off your first session</span>
+        </div>
+        <div class="hero-photo-stat">
+          <strong>K-12</strong>
+          <span>All year levels</span>
+        </div>
+        <div class="hero-photo-stat">
+          <strong>24hr</strong>
+          <span>We respond personally</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ CREDENTIAL STRIP -->
+<div class="cred-strip">
+  <div class="cred-items">
+    <div class="cred-item"><div class="cred-dot"></div>Wagga Wagga based</div>
+    <div class="cred-item"><div class="cred-dot"></div>K-12 all subjects</div>
+    <div class="cred-item"><div class="cred-dot"></div>WWCC verified tutors</div>
+    <div class="cred-item"><div class="cred-dot"></div>We come to you or remote</div>
+    <div class="cred-item"><div class="cred-dot"></div>First session 50% off</div>
+  </div>
+</div>
+
+<hr class="gold-divider"/>
+
+<!-- ══════════════════════════════════════════ WHY Tutor 2 Success -->
+<section class="features-section">
+  <div class="section-label center">Why Choose Tutor 2 Success</div>
+  <h2>WHAT SETS US <span class="gold">APART</span></h2>
+  <p class="section-intro">We are not a national chain. We are a local tutoring service that knows Wagga Wagga, knows the NSW curriculum, and genuinely cares about your child's progress across every subject.</p>
+  <div class="features-grid">
+    <div class="feat-card">
+      <div class="feat-icon">&#127979;</div>
+      <h3>BROAD CURRICULUM EXPERTISE</h3>
+      <p>From English essays to Legal Studies, Maths to Computing Technology, our tutors cover the full K-12 NSW curriculum. We are not a one-subject shop.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">&#128203;</div>
+      <h3>STRUCTURED SESSIONS</h3>
+      <p>Every session follows a plan. Session notes are kept after each lesson so students, parents, and tutors stay aligned on progress and next steps.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">&#127968;</div>
+      <h3>WE COME TO YOU</h3>
+      <p>We do not have an office. In-person sessions happen at your home or a mutually agreed location in Wagga Wagga. Remote students connect via Zoom with a shared digital whiteboard.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">&#128101;</div>
+      <h3>SMALL GROUP OPTION</h3>
+      <p>Group sessions are capped at three students from the same year level and subject, keeping them genuinely small and focused, not a classroom in disguise.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">&#127891;</div>
+      <h3>HIGH-ACHIEVING UNI TUTORS</h3>
+      <p>All sub-tutors are high-achieving local university students, personally selected by Alex for their subject knowledge and communication ability. Every one holds a current Working With Children Check.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">&#9993;</div>
+      <h3>ALWAYS IN TOUCH</h3>
+      <p>We handle every enquiry personally and stay in contact throughout your time with Tutor 2 Success. You are never passed off to an anonymous system. You always have a real person to speak to.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="gold-divider"/>
+
+<!-- ══════════════════════════════════════════ TRUST SECTION -->
+<section class="trust-section">
+  <div class="section-label center">Our Commitment</div>
+  <h2 class="center">WHY FAMILIES <span class="gold">TRUST US</span></h2>
+  <p class="section-intro center">We do not ask you to take our word for it. We demonstrate our commitment through transparent policies and a low-risk trial offer.</p>
+  <div class="trust-grid">
+    <div class="trust-card">
+      <div class="trust-icon">&#9733;</div>
+      <h3>TRIAL SESSION OFFER</h3>
+      <p>Your first session is 50% off. There is no lock-in contract, so you can see the value before committing to ongoing tutoring.</p>
+    </div>
+    <div class="trust-card">
+      <div class="trust-icon">&#10003;</div>
+      <h3>WWCC VERIFIED</h3>
+      <p>Every tutor, Alex and all sub-tutors, holds a current Working With Children Check. We do not make exceptions, and we can provide documentation on request.</p>
+    </div>
+    <div class="trust-card">
+      <div class="trust-icon">&#128172;</div>
+      <h3>PERSONAL COMMUNICATION</h3>
+      <p>We respond to every enquiry personally and stay involved throughout. You will always know who you are dealing with and have a direct line back to us.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ FROM ALEX -->
+<section>
+  <div class="from-alex-layout">
+    <div class="from-alex-photo-wrap">
+      <img
+        src="headshot.jpg"
+        alt="Alex Corneliusen, Founder of Tutor 2 Success"
+        class="from-alex-photo"
+      />
+      <div class="from-alex-photo-tag">
+        <span class="from-alex-photo-tag-name">Alex Corneliusen</span>
+        <span class="from-alex-photo-tag-role">Founder and Lead Tutor, Wagga Wagga</span>
+      </div>
+    </div>
+    <div>
+      <div class="section-label">A Personal Note</div>
+      <h2>FROM <span class="gold">ALEX</span></h2>
+      <p>I started Tutor 2 Success because I grew up in regional NSW and watched students fall behind, not because they were not capable, but because quality support was not accessible where they lived.</p>
+      <p>Tutor 2 Success is not a platform where you browse tutors and hope for the best. When you get in touch, you are talking to me directly. I will listen, figure out the right fit for your student, and stay in the loop throughout. If something is not working, you come back to me and we sort it out together.</p>
+      <p>That is the business I want to run. Local, personal, and genuinely invested in the students we work with.</p>
+      <div class="from-alex-sig">
+        <span class="from-alex-sig-name">Alex Corneliusen</span>
+        <span class="from-alex-sig-role">Founder and Lead Tutor, Tutor 2 Success</span>
+      </div>
+      <a href="about.html" class="btn btn-outline">Read More About Tutor 2 Success</a>
+    </div>
+  </div>
+</section>
+
+<hr class="gold-divider"/>
+
+<!-- ══════════════════════════════════════════ CTA -->
+<div class="cta-strip">
+  <h2>READY TO GET <span class="gold">STARTED?</span></h2>
+  <p>Reach out today for a free initial chat about your student's needs. No obligation, no pressure, just a conversation with Alex.</p>
+  <div class="cta-btns">
+    <a href="contact.html" class="btn btn-gold btn-lg">Book a Trial Session</a>
+    <a href="how-it-works.html" class="btn btn-outline btn-lg">See How It Works</a>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════ FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="default.png" alt="Tutor 2 Success" style="height:38px;object-fit:contain;margin-bottom:12px;filter:brightness(0) invert(1);" />
+      <p>Quality K-12 tutoring for Wagga Wagga and regional NSW students. In-person (we come to you) and remote sessions with qualified, WWCC-verified university tutors.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Pages</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Subjects</h5>
+      <ul>
+        <li><a href="services.html">English</a></li>
+        <li><a href="services.html">Mathematics</a></li>
+        <li><a href="services.html">Science</a></li>
+        <li><a href="services.html">Business Studies</a></li>
+        <li><a href="services.html">Legal Studies</a></li>
+        <li><a href="services.html">Computing</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="contact.html">Book a Session</a></li>
+        <li><a href="contact.html">Send an Enquiry</a></li>
+        <li><a href="mailto:hello@tutor2success.com.au">hello@tutor2success.com.au</a></li>
+        <li><span style="color:rgba(255,255,255,0.4);">Wagga Wagga, NSW</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Tutor 2 Success. Wagga Wagga, NSW. All rights reserved.</span>
+    <span>K-12 Tutoring. In-person and Remote.</span>
+  </div>
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>

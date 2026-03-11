@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How It Works – Tutor 2 Success</title>
+  <meta name="description" content="From your first enquiry to ongoing sessions. Here is exactly how Tutor 2 Success works for Wagga Wagga and regional NSW families." />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .steps-vertical { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 0; }
+    .step-v {
+      display: grid; grid-template-columns: 72px 1fr; gap: 28px;
+      padding-bottom: 44px; position: relative;
+    }
+    .step-v:last-child { padding-bottom: 0; }
+    .step-v-left { display: flex; flex-direction: column; align-items: center; }
+    .step-v-num {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: var(--gold); color: #0B173D;
+      font-family: var(--font-head); font-size: 1.6rem; letter-spacing: 1px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 0 0 6px var(--gold-pale);
+    }
+    .step-v-line {
+      flex: 1; width: 2px; background: linear-gradient(to bottom, var(--gold), rgba(209,161,3,.15));
+      margin-top: 12px; min-height: 32px;
+    }
+    .step-v:last-child .step-v-line { display: none; }
+    .step-v-content { padding-top: 12px; }
+    .step-v-content h3 { font-family: var(--font-head); font-size: 1.5rem; letter-spacing: 1px; color: var(--text); margin-bottom: 10px; }
+    .step-v-content p { font-size: .9rem; color: var(--muted); line-height: 1.75; margin-bottom: 14px; }
+    .step-detail {
+      background: var(--panel); border: 1px solid var(--border); border-radius: 10px;
+      padding: 16px 20px; font-size: .84rem; color: var(--muted); line-height: 1.65;
+      display: flex; align-items: flex-start; gap: 10px;
+    }
+    .step-detail-icon { font-size: 1rem; flex-shrink: 0; margin-top: 2px; }
+
+    .faq-teaser { background: var(--panel); }
+    .faq-teaser-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 760px; margin: 0 auto; }
+    .faq-teaser-item {
+      background: var(--bg); border: 1px solid var(--border); border-radius: 10px;
+      padding: 20px 22px; box-shadow: var(--shadow);
+    }
+    .faq-teaser-item h4 { font-weight: 700; font-size: .9rem; color: #8a6b00; margin-bottom: 8px; }
+    .faq-teaser-item p { font-size: .84rem; color: var(--muted); line-height: 1.65; }
+
+    @media (max-width: 620px) {
+      .faq-teaser-grid { grid-template-columns: 1fr; }
+      .step-v { grid-template-columns: 52px 1fr; gap: 18px; }
+      .step-v-num { width: 44px; height: 44px; font-size: 1.3rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════ NAV -->
+<nav>
+  <a href="index.html" style="text-decoration:none;display:flex;align-items:center;">
+    <img src="default.png" alt="Tutor 2 Success Logo" style="height:50px;object-fit:contain;"
+         onerror="this.style.display='none';document.getElementById('logo-fb').style.display='flex';" />
+    <div id="logo-fb" class="logo-wrap" style="display:none;">
+      <div class="logo-icon">
+        <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13 5 L5 10 L13 15 L21 10 Z" fill="#0B173D" stroke="#0B173D" stroke-width=".5"/>
+          <path d="M7 12v5c0 2 2.5 4 6 4s6-2 6-4v-5" fill="none" stroke="#0B173D" stroke-width="1.5"/>
+          <line x1="21" y1="10" x2="21" y2="17" stroke="#0B173D" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="logo-wordmark">
+        <div class="logo-name">TUTOR 2 SUCCESS</div>
+        <div class="logo-slogan">Empowering Every Learner</div>
+      </div>
+    </div>
+  </a>
+
+  <div class="nav-links" id="nav-links">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="how-it-works.html" class="active">How It Works</a>
+    <a href="about.html">About</a>
+    <a href="faq.html">FAQ</a>
+  </div>
+
+  <div class="nav-actions">
+    <a href="contact.html" class="btn btn-outline" style="padding:9px 20px;font-size:.85rem;">Contact</a>
+    <a href="contact.html" class="btn btn-gold" style="padding:9px 20px;font-size:.85rem;">Book a Session</a>
+    <a href="portal.html" class="btn-portal">Parent Login</a>
+  </div>
+
+  <button type="button" class="nav-hamburger" onclick="document.getElementById('nav-links').classList.toggle('open')" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ══════════════════════════════════════════ PAGE HEADER -->
+<div class="page-header">
+  <div class="eyebrow">Simple and Straightforward</div>
+  <h1>HOW IT <span class="gold">WORKS</span></h1>
+  <p>From your first enquiry to your student's first session. Here is exactly what to expect when you come to Tutor 2 Success. No surprises, no complicated onboarding. Alex handles it all personally.</p>
+</div>
+
+<!-- ══════════════════════════════════════════ STEPS -->
+<section>
+  <div class="steps-vertical">
+
+    <div class="step-v">
+      <div class="step-v-left">
+        <div class="step-v-num">1</div>
+        <div class="step-v-line"></div>
+      </div>
+      <div class="step-v-content">
+        <h3>ENQUIRE VIA THE WEBSITE</h3>
+        <p>Fill out the short contact form on our <a href="contact.html" style="color:var(--gold);">Contact page</a> or send us an email directly. Tell us your student's year level, subject, and what you are hoping to work on. No forms to print, no lengthy sign-up process.</p>
+        <div class="step-detail">
+          <span class="step-detail-icon">&#128203;</span>
+          <span>We read every enquiry personally and typically respond within 24 hours to confirm receipt and arrange a time to chat.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-v">
+      <div class="step-v-left">
+        <div class="step-v-num">2</div>
+        <div class="step-v-line"></div>
+      </div>
+      <div class="step-v-content">
+        <h3>FREE CHAT WITH US</h3>
+        <p>We will have a brief conversation with you by phone, email, or video to understand your student's specific needs, the subjects they need support in, and the outcomes you are aiming for. This is completely free with no obligation.</p>
+        <p>We will also answer any questions you have about how sessions run and confirm the rate before anyone commits to anything.</p>
+        <div class="step-detail">
+          <span class="step-detail-icon">&#128172;</span>
+          <span>This chat usually takes 10 to 15 minutes. It helps ensure Tutor 2 Success is the right fit before you spend a cent.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-v">
+      <div class="step-v-left">
+        <div class="step-v-num">3</div>
+        <div class="step-v-line"></div>
+      </div>
+      <div class="step-v-content">
+        <h3>BOOK YOUR TRIAL SESSION</h3>
+        <p>Ready to go? Book your first session, which is 50% off as our introductory offer. This is your chance to experience Tutor 2 Success firsthand and see whether it is the right fit before committing to ongoing sessions.</p>
+        <div class="step-detail">
+          <span class="step-detail-icon">&#11088;</span>
+          <span>First session is 50% off the standard rate. No conditions, no catch. There is no lock-in contract.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-v">
+      <div class="step-v-left">
+        <div class="step-v-num">4</div>
+        <div class="step-v-line"></div>
+      </div>
+      <div class="step-v-content">
+        <h3>WE MATCH YOUR STUDENT</h3>
+        <p>Based on your student's subject, year level, learning style, and availability, we personally match them to the right tutor. That may be Alex directly, or one of our high-achieving university tutors from the local area. Every tutor holds a current Working With Children Check and is hand-picked for their subject knowledge.</p>
+        <div class="step-detail">
+          <span class="step-detail-icon">&#9989;</span>
+          <span>If the match does not feel right after the trial, just let us know. We will reassess and find a better fit.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-v">
+      <div class="step-v-left">
+        <div class="step-v-num">5</div>
+        <div class="step-v-line"></div>
+      </div>
+      <div class="step-v-content">
+        <h3>ONGOING SESSIONS</h3>
+        <p>Once you are happy with the setup, Alex establishes a regular schedule that suits your student and family. Sessions are managed through our booking system for easy scheduling, invoicing, and session notes.</p>
+        <p>After each session, a written summary is shared with the family covering what was covered, homework set, and any areas to focus on next time. Alex stays in touch throughout and is always available if you have a question.</p>
+        <div class="step-detail">
+          <span class="step-detail-icon">&#128197;</span>
+          <span>Need to reschedule? Just give Alex reasonable notice. We work with families to keep sessions consistent without making it stressful.</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="gold-divider"/>
+
+<!-- ══════════════════════════════════════════ QUICK ANSWERS -->
+<section class="faq-teaser">
+  <div class="section-label center">Quick Answers</div>
+  <h2 class="center">COMMON <span class="gold">QUESTIONS</span></h2>
+  <p class="section-intro center">A few things families often ask at this stage.</p>
+  <div class="faq-teaser-grid">
+    <div class="faq-teaser-item">
+      <h4>Is there a minimum number of sessions?</h4>
+      <p>No. There is no lock-in contract and no minimum commitment. Most families find a regular weekly schedule delivers the best results, but you are never obligated to continue.</p>
+    </div>
+    <div class="faq-teaser-item">
+      <h4>What if the trial session is not a good fit?</h4>
+      <p>Just let Alex know. He will have an honest conversation about what would work better, whether that is a different tutor, a different format, or simply that Tutor 2 Success is not the right match. No hard feelings.</p>
+    </div>
+    <div class="faq-teaser-item">
+      <h4>Do sessions happen at our home?</h4>
+      <p>Yes. Tutor 2 Success does not have an office. In-person sessions take place at your home or a mutually agreed location in Wagga Wagga. Remote students connect via Zoom from wherever they are.</p>
+    </div>
+    <div class="faq-teaser-item">
+      <h4>How do I pay?</h4>
+      <p>Invoices are issued through our session management system. Payment details are provided at confirmation. We accept standard electronic payment methods. No cash required.</p>
+    </div>
+  </div>
+  <div style="text-align:center; margin-top: 32px;">
+    <a href="faq.html" class="btn btn-outline">See All FAQs</a>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ CTA -->
+<div class="cta-strip">
+  <h2>READY TO <span class="gold">GET STARTED?</span></h2>
+  <p>The first step takes two minutes. Fill in the contact form and we will be in touch within 24 hours.</p>
+  <div class="cta-btns">
+    <a href="contact.html" class="btn btn-gold btn-lg">Start Your Enquiry</a>
+    <a href="pricing.html" class="btn btn-outline btn-lg">View Pricing</a>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════ FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="default.png" alt="Tutor 2 Success" style="height:38px;object-fit:contain;margin-bottom:12px;filter:brightness(0) invert(1);" />
+      <p>Quality K-12 tutoring for Wagga Wagga and regional NSW students. In-person (we come to you) and remote sessions with qualified, WWCC-verified university tutors.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Pages</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Subjects</h5>
+      <ul>
+        <li><a href="services.html">English</a></li>
+        <li><a href="services.html">Mathematics</a></li>
+        <li><a href="services.html">Science</a></li>
+        <li><a href="services.html">Business Studies</a></li>
+        <li><a href="services.html">Legal Studies</a></li>
+        <li><a href="services.html">Computing</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="contact.html">Book a Session</a></li>
+        <li><a href="contact.html">Send an Enquiry</a></li>
+        <li><a href="mailto:hello@tutor2success.com.au">hello@tutor2success.com.au</a></li>
+        <li><span style="color:rgba(255,255,255,0.4);">Wagga Wagga, NSW</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Tutor 2 Success. Wagga Wagga, NSW. All rights reserved.</span>
+    <span>K-12 Tutoring. In-person and Remote.</span>
+  </div>
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>

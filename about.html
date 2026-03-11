@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About – Tutor 2 Success</title>
+  <meta name="description" content="Meet Alex Corneliusen and learn the story of Tutor 2 Success, Wagga Wagga's local K-12 tutoring service, relaunching in 2026." />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .sub-tutor-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .sub-tutor-card {
+      background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 26px 22px; text-align: center; box-shadow: var(--shadow);
+      transition: border-color .2s;
+    }
+    .sub-tutor-card:hover { border-color: var(--gold); }
+    .sub-tutor-icon {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: var(--gold-pale); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; margin: 0 auto 14px;
+    }
+    .sub-tutor-card h4 { font-family: var(--font-head); font-size: 1rem; letter-spacing: 1px; color: var(--text); margin-bottom: 8px; }
+    .sub-tutor-card p { font-size: .84rem; color: var(--muted); line-height: 1.65; }
+
+    @media (max-width: 960px) { .sub-tutor-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 620px) { .sub-tutor-grid { grid-template-columns: 1fr; } }
+
+    .about-family-layout {
+      display: grid; grid-template-columns: 480px 1fr; gap: 64px; align-items: center;
+    }
+    .about-family-photo {
+      width: 100%; border-radius: 16px; object-fit: cover;
+      max-height: 400px; box-shadow: var(--shadow);
+    }
+    .about-family-text .section-label { margin-bottom: 12px; }
+    .about-family-text h2 { margin-bottom: 20px; }
+    .about-family-text p { color: var(--muted); line-height: 1.75; margin-bottom: 14px; }
+
+    @media (max-width: 960px) {
+      .about-family-layout { grid-template-columns: 1fr; gap: 32px; }
+      .about-family-photo { max-height: 320px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════ NAV -->
+<nav>
+  <a href="index.html" style="text-decoration:none;display:flex;align-items:center;">
+    <img src="default.png" alt="Tutor 2 Success Logo" style="height:50px;object-fit:contain;"
+         onerror="this.style.display='none';document.getElementById('logo-fb').style.display='flex';" />
+    <div id="logo-fb" class="logo-wrap" style="display:none;">
+      <div class="logo-icon">
+        <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13 5 L5 10 L13 15 L21 10 Z" fill="#0B173D" stroke="#0B173D" stroke-width=".5"/>
+          <path d="M7 12v5c0 2 2.5 4 6 4s6-2 6-4v-5" fill="none" stroke="#0B173D" stroke-width="1.5"/>
+          <line x1="21" y1="10" x2="21" y2="17" stroke="#0B173D" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="logo-wordmark">
+        <div class="logo-name">TUTOR 2 SUCCESS</div>
+        <div class="logo-slogan">Empowering Every Learner</div>
+      </div>
+    </div>
+  </a>
+
+  <div class="nav-links" id="nav-links">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="about.html" class="active">About</a>
+    <a href="faq.html">FAQ</a>
+  </div>
+
+  <div class="nav-actions">
+    <a href="contact.html" class="btn btn-outline" style="padding:9px 20px;font-size:.85rem;">Contact</a>
+    <a href="contact.html" class="btn btn-gold" style="padding:9px 20px;font-size:.85rem;">Book a Session</a>
+    <a href="portal.html" class="btn-portal">Parent Login</a>
+  </div>
+
+  <button type="button" class="nav-hamburger" onclick="document.getElementById('nav-links').classList.toggle('open')" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ══════════════════════════════════════════ PAGE HEADER -->
+<div class="page-header">
+  <div class="eyebrow">The Tutor 2 Success Story</div>
+  <h1>ABOUT <span class="gold">TUTOR 2 SUCCESS</span></h1>
+  <p>A local tutoring service built in Wagga Wagga, for Wagga Wagga, and for regional NSW students who deserve the same quality support as their city counterparts.</p>
+</div>
+
+<!-- ══════════════════════════════════════════ MEET ALEX -->
+<section>
+  <div class="section-label center">Meet the Founder</div>
+  <h2 class="center">ALEX <span class="gold">CORNELIUSEN</span></h2>
+  <div class="about-layout">
+    <div class="about-visual">
+      <img src="headshot.jpg" alt="Alex Corneliusen, Founder of Tutor 2 Success" class="about-headshot" />
+      <div class="about-name">ALEX CORNELIUSEN</div>
+      <div class="about-title">Founder and Lead Tutor, Tutor 2 Success</div>
+      <div class="about-creds">
+        <div class="about-cred">Based in Wagga Wagga, NSW</div>
+        <div class="about-cred">Experienced K-12 tutor across multiple subjects</div>
+        <div class="about-cred">Local understanding of the NSW curriculum</div>
+        <div class="about-cred">Working With Children Check (WWCC) verified</div>
+        <div class="about-cred">Founder of Tutor 2 Success original run (2020 to 2022)</div>
+        <div class="about-cred">Relaunching Tutor 2 Success under the expanded model in 2026</div>
+      </div>
+    </div>
+
+    <div class="about-text">
+      <h3>LOCAL, PERSONAL, AND GENUINELY INVESTED</h3>
+      <p>Alex Corneliusen started Tutor 2 Success out of a conviction that regional students should not have to accept less, less access, less support, or less quality, just because they are not in Sydney or Melbourne.</p>
+      <p>Having lived and studied in the Riverina region, Alex understands firsthand the pressures that students in Wagga Wagga and surrounds face: fewer resources, less peer competition to push against, and tutoring options that are either overpriced national chains or informal arrangements with questionable consistency.</p>
+      <p>Tutor 2 Success was built to be something different. Genuinely personalised, properly structured, and fairly priced. We are personally involved in every part of it. Every enquiry, every tutor match, every session note review.</p>
+
+      <div class="mission-block">
+        <p>"To give Wagga Wagga and Riverina students access to quality, personalised tutoring from people who actually understand the local experience, at prices that work for regional families."</p>
+      </div>
+
+      <p>We work directly with students on a one-on-one basis and personally select and oversee every university tutor who delivers sessions on behalf of Tutor 2 Success. If you ever have a question or concern, we are here.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="gold-divider"/>
+
+<!-- ══════════════════════════════════════════ FAMILY -->
+<section>
+  <div class="about-family-layout">
+    <img
+      src="familyPhoto.JPG"
+      alt="Alex and Allie Corneliusen"
+      class="about-family-photo"
+    />
+    <div class="about-family-text">
+      <div class="section-label">Behind the Business</div>
+      <h2>ALEX <span class="gold">AND ALLIE</span></h2>
+      <p>Tutor 2 Success is a family-backed business. Alex's wife Allie is a core part of the Tutor 2 Success story, providing the support and encouragement behind the scenes that makes running a local small business possible.</p>
+      <p>When you reach out to Tutor 2 Success, you are not dealing with a faceless company. You are dealing with a local family that cares about this community and wants to see Wagga Wagga students thrive.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="gold-divider"/>
+
+<!-- ══════════════════════════════════════════ Tutor 2 Success STORY -->
+<section style="background: var(--panel);">
+  <div class="section-label center">Our History</div>
+  <h2>THE <span class="gold">Tutor 2 Success STORY</span></h2>
+  <p class="section-intro">Tutor 2 Success is not a brand new venture. It has roots, local experience, and a clear reason for coming back.</p>
+  <div class="about-layout">
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-year">2020</div>
+        <h4>Tutor 2 Success Founded</h4>
+        <p>Alex Corneliusen launched Tutor 2 Success in Wagga Wagga, initially focused on tutoring for local secondary school students. The business grew organically through word of mouth in the local school community.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2020 to 2022</div>
+        <h4>Original Operation</h4>
+        <p>Tutor 2 Success operated for two years as a Wagga Wagga-based tutoring service. Sessions were delivered in-person, building a track record and local reputation in the community.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2022</div>
+        <h4>Temporary Pause</h4>
+        <p>Tutor 2 Success paused operations as Alex's circumstances changed. The brand, experience, and local relationships remained, waiting for the right time to return.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2026</div>
+        <h4>The Relaunch</h4>
+        <p>Tutor 2 Success returns as a hybrid in-person and remote tutoring service, expanded to cover K-12 subjects across primary and secondary school. The relaunch adds a university tutor network to extend capacity while maintaining quality control, with local high-achieving university students recruited and onboarded directly by Alex.</p>
+      </div>
+    </div>
+
+    <div class="about-text">
+      <h3>WHY THE RELAUNCH?</h3>
+      <p>The demand never went away. Wagga Wagga students still face the same challenges: limited access to specialist tutoring, big-city pricing from national chains, and a shortage of tutors who actually understand the local context.</p>
+      <p>The 2026 relaunch introduces a stronger model: hybrid delivery so regional students anywhere in the Riverina can access sessions remotely, a broader subject offering across K-12, and a structured university tutor network to provide more capacity without sacrificing quality.</p>
+      <p>Every tutor is personally selected by Alex, WWCC-verified, and briefed on the Tutor 2 Success approach. They are not anonymous contractors. They are high-achieving university students from the local community who know and care about the students they teach.</p>
+
+      <div style="margin-top: 28px;">
+        <div class="section-label center">The Tutor Network</div>
+        <p style="font-size:.9rem; color:var(--muted); line-height:1.75; margin-top: 12px;">Tutor 2 Success draws on a network of high-achieving local university students who are recruited, screened, and personally onboarded by Alex. This is not a marketplace. It is a curated team where Alex knows every tutor and stands behind every session they deliver.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="gold-divider"/>
+
+<!-- ══════════════════════════════════════════ TUTOR STANDARDS -->
+<section>
+  <div class="section-label center">Our Tutors</div>
+  <h2>THE <span class="gold">Tutor 2 Success TUTOR STANDARD</span></h2>
+  <p class="section-intro">Whether you are working with Alex directly or with one of our university tutors, the standard does not drop. Every Tutor 2 Success tutor meets the same requirements.</p>
+  <div class="sub-tutor-grid">
+    <div class="sub-tutor-card">
+      <div class="sub-tutor-icon">&#9989;</div>
+      <h4>WWCC VERIFIED</h4>
+      <p>Every tutor holds a current, valid Working With Children Check. We verify this before any tutor works with a student. Documentation is available on request.</p>
+    </div>
+    <div class="sub-tutor-card">
+      <div class="sub-tutor-icon">&#127891;</div>
+      <h4>HIGH-ACHIEVING UNI STUDENTS</h4>
+      <p>Our tutors are high-achieving local university students, selected based on demonstrated subject competency and communication ability. They know the Wagga community and understand the pressures local students face.</p>
+    </div>
+    <div class="sub-tutor-card">
+      <div class="sub-tutor-icon">&#127968;</div>
+      <h4>LOCAL CONTEXT</h4>
+      <p>We prioritise tutors who understand the local school environment, the pressures Wagga Wagga students face, and the community they are part of.</p>
+    </div>
+    <div class="sub-tutor-card">
+      <div class="sub-tutor-icon">&#128203;</div>
+      <h4>SESSION NOTES</h4>
+      <p>Every tutor, not just Alex, is required to produce written session notes after each lesson. Parents stay informed regardless of who delivers the session.</p>
+    </div>
+    <div class="sub-tutor-card">
+      <div class="sub-tutor-icon">&#129309;</div>
+      <h4>PERSONALLY SELECTED</h4>
+      <p>We personally vet every tutor. This is not a platform where anyone can sign up. Tutor 2 Success tutors are selected one by one, with relationships built directly through the local university network.</p>
+    </div>
+    <div class="sub-tutor-card">
+      <div class="sub-tutor-icon">&#128172;</div>
+      <h4>WE STAY IN TOUCH</h4>
+      <p>Even when a sub-tutor delivers your sessions, we remain your point of contact. We review session notes, address any concerns, and stay involved throughout your time with Tutor 2 Success.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ CTA -->
+<div class="cta-strip">
+  <h2>MEET THE TEAM. <span class="gold">BOOK A SESSION.</span></h2>
+  <p>Have a question about our tutors or the Tutor 2 Success approach? Reach out and we will get back to you.</p>
+  <div class="cta-btns">
+    <a href="contact.html" class="btn btn-gold btn-lg">Get in Touch</a>
+    <a href="services.html" class="btn btn-outline btn-lg">See Our Subjects</a>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════ FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="default.png" alt="Tutor 2 Success" style="height:38px;object-fit:contain;margin-bottom:12px;filter:brightness(0) invert(1);" />
+      <p>Quality K-12 tutoring for Wagga Wagga and regional NSW students. In-person (we come to you) and remote sessions with qualified, WWCC-verified university tutors.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Pages</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Subjects</h5>
+      <ul>
+        <li><a href="services.html">English</a></li>
+        <li><a href="services.html">Mathematics</a></li>
+        <li><a href="services.html">Science</a></li>
+        <li><a href="services.html">Business Studies</a></li>
+        <li><a href="services.html">Legal Studies</a></li>
+        <li><a href="services.html">Computing</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="contact.html">Book a Session</a></li>
+        <li><a href="contact.html">Send an Enquiry</a></li>
+        <li><a href="mailto:hello@tutor2success.com.au">hello@tutor2success.com.au</a></li>
+        <li><span style="color:rgba(255,255,255,0.4);">Wagga Wagga, NSW</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Tutor 2 Success. Wagga Wagga, NSW. All rights reserved.</span>
+    <span>K-12 Tutoring. In-person and Remote.</span>
+  </div>
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>

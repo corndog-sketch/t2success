@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing – Tutor 2 Success</title>
+  <meta name="description" content="Transparent, competitive tutoring rates for K-12 students in Wagga Wagga and regional NSW. First session 50% off. No lock-in contracts." />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .pricing-section { background: var(--panel); }
+
+    .pricing-top-row {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+      margin-bottom: 48px;
+    }
+    .pricing-intro-note {
+      background: var(--gold-pale); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 22px 26px;
+      font-size: .875rem; color: var(--muted); line-height: 1.75;
+    }
+    .pricing-intro-note strong { color: #8a6b00; }
+    .offer-banner-col { flex-direction: column; align-items: flex-start; gap: 16px; margin-bottom: 0; }
+    .btn-book-trial { color: #0B173D; border-color: #0B173D; white-space: nowrap; }
+    @media (max-width: 760px) { .pricing-top-row { grid-template-columns: 1fr; } }
+
+    .pricing-full-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
+      margin: 0 auto 48px;
+    }
+
+    .price-card-wide {
+      background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 26px 20px; transition: transform .2s, border-color .2s;
+      display: flex; flex-direction: column; box-shadow: var(--shadow);
+    }
+    .price-card-wide:hover { transform: translateY(-4px); border-color: rgba(209,161,3,.6); }
+    .price-card-wide.featured {
+      border-color: var(--gold);
+      box-shadow: 0 12px 40px rgba(209,161,3,.2);
+    }
+    .price-type-label {
+      font-family: var(--font-head); font-size: .75rem; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 8px;
+    }
+    .price-card-wide h3 {
+      font-family: var(--font-head); font-size: 1.25rem; letter-spacing: 1px;
+      color: var(--text); margin-bottom: 8px;
+    }
+    .price-rate-row {
+      display: flex; align-items: baseline; gap: 6px; margin-bottom: 6px;
+    }
+    .price-rate {
+      font-family: var(--font-head); font-size: 2rem; letter-spacing: 1px; color: var(--gold);
+    }
+    .price-rate-unit { font-size: .8rem; color: var(--muted); }
+    .price-desc { font-size: .82rem; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .price-includes { list-style: none; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+    .price-includes li { display: flex; align-items: flex-start; gap: 8px; font-size: .8rem; color: var(--muted); line-height: 1.5; }
+    .price-includes li::before { content: '✦'; color: var(--gold); font-size: .6rem; flex-shrink: 0; margin-top: 3px; }
+
+    .tbc-badge {
+      display: inline-block; background: var(--gold-pale); border: 1px solid var(--border);
+      color: #8a6b00; font-size: .72rem; font-weight: 700; letter-spacing: .5px;
+      padding: 3px 10px; border-radius: 20px; margin-bottom: 6px;
+    }
+
+    .pricing-notes { max-width: 960px; margin: 0 auto; }
+    .section-panel { background: var(--panel); }
+    .pricing-notes h3 { font-family: var(--font-head); font-size: 1.4rem; letter-spacing: 1px; color: var(--text); margin-bottom: 20px; }
+    .notes-list { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .note-item {
+      display: flex; align-items: flex-start; gap: 14px;
+      background: var(--panel); border: 1px solid var(--border);
+      border-radius: 10px; padding: 16px 20px;
+    }
+    .note-icon {
+      width: 36px; height: 36px; border-radius: 8px;
+      background: var(--gold-pale); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; flex-shrink: 0;
+    }
+    .note-text strong { display: block; font-size: .88rem; color: var(--text); margin-bottom: 4px; }
+    .note-text p { font-size: .84rem; color: var(--muted); line-height: 1.65; }
+
+    @media (max-width: 540px) {
+      .pricing-full-grid { grid-template-columns: 1fr; }
+      .notes-list { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════ NAV -->
+<nav>
+  <a href="index.html" style="text-decoration:none;display:flex;align-items:center;">
+    <img src="default.png" alt="Tutor 2 Success Logo" style="height:50px;object-fit:contain;"
+         onerror="this.style.display='none';document.getElementById('logo-fb').style.display='flex';" />
+    <div id="logo-fb" class="logo-wrap" style="display:none;">
+      <div class="logo-icon">
+        <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13 5 L5 10 L13 15 L21 10 Z" fill="#0B173D" stroke="#0B173D" stroke-width=".5"/>
+          <path d="M7 12v5c0 2 2.5 4 6 4s6-2 6-4v-5" fill="none" stroke="#0B173D" stroke-width="1.5"/>
+          <line x1="21" y1="10" x2="21" y2="17" stroke="#0B173D" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="logo-wordmark">
+        <div class="logo-name">TUTOR 2 SUCCESS</div>
+        <div class="logo-slogan">Empowering Every Learner</div>
+      </div>
+    </div>
+  </a>
+
+  <div class="nav-links" id="nav-links">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="pricing.html" class="active">Pricing</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="about.html">About</a>
+    <a href="faq.html">FAQ</a>
+  </div>
+
+  <div class="nav-actions">
+    <a href="contact.html" class="btn btn-outline" style="padding:9px 20px;font-size:.85rem;">Contact</a>
+    <a href="contact.html" class="btn btn-gold" style="padding:9px 20px;font-size:.85rem;">Book a Session</a>
+    <a href="portal.html" class="btn-portal">Parent Login</a>
+  </div>
+
+  <button type="button" class="nav-hamburger" onclick="document.getElementById('nav-links').classList.toggle('open')" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ══════════════════════════════════════════ PAGE HEADER -->
+<div class="page-header">
+  <div class="eyebrow">Transparent and Competitive</div>
+  <h1>PRICING <span class="gold">AND RATES</span></h1>
+  <p>Honest, fair pricing with no hidden fees. Our rates are set to be accessible for regional families, deliberately below the big tutoring chains, with no lock-in contracts.</p>
+</div>
+
+<!-- ══════════════════════════════════════════ INTRO OFFER BANNER -->
+<section>
+  <div class="pricing-top-row">
+    <div class="offer-banner offer-banner-col">
+      <div class="offer-banner-text">
+        <h3>FIRST SESSION: 50% OFF</h3>
+        <p>Try Tutor 2 Success before you commit. Your first session with any tutor is half price. No conditions, no catch.</p>
+      </div>
+      <a href="contact.html" class="btn btn-outline btn-book-trial">Book Your Trial</a>
+    </div>
+    <div class="pricing-intro-note">
+      No hidden fees, no lock-in contracts. We confirm your exact rate before you commit. <a href="contact.html" class="link-gold">Get in touch</a> with any questions.
+    </div>
+  </div>
+
+  <div class="pricing-full-grid">
+
+    <div class="price-card-wide featured">
+      <div class="price-type-label">&#9733; Owner-Led</div>
+      <h3>Sessions with Alex</h3>
+      <div class="price-rate-row">
+        <div class="price-rate">$75</div>
+        <div class="price-rate-unit">/ hour</div>
+      </div>
+      <p class="price-desc">Direct sessions with Alex. Priced below the national chains and competitively with the local Wagga market. We handle all communication before, during, and after your sessions.</p>
+      <ul class="price-includes">
+        <li>One-on-one, personalised to your student's needs</li>
+        <li>Session notes provided after every lesson</li>
+        <li>Flexible scheduling, in-person (we come to you) or remote</li>
+        <li>All K-12 subjects across primary and secondary school</li>
+        <li>First session 50% off ($37.50 trial)</li>
+      </ul>
+    </div>
+
+    <div class="price-card-wide">
+      <div class="price-type-label">University Tutor</div>
+      <h3>Sessions with a Uni Tutor</h3>
+      <div class="price-rate-row">
+        <div class="price-rate">$60</div>
+        <div class="price-rate-unit">/ hour</div>
+      </div>
+      <p class="price-desc">Sessions with one of our screened, WWCC-verified university tutors. High-achieving local university students, personally selected and matched by Alex for your subject.</p>
+      <ul class="price-includes">
+        <li>Screened, WWCC-verified university tutors</li>
+        <li>High-achieving university students matched to your subject</li>
+        <li>Session notes kept after each lesson</li>
+        <li>Alex stays in the loop and is always your point of contact</li>
+        <li>In-person (we come to you) or remote</li>
+      </ul>
+    </div>
+
+    <div class="price-card-wide">
+      <div class="price-type-label">Small Group</div>
+      <h3>Group Sessions</h3>
+      <div class="price-rate-row">
+        <div class="price-rate">$45</div>
+        <div class="price-rate-unit">per student / hour</div>
+      </div>
+      <p class="price-desc">Per-student rate for small group sessions. Always cheaper than individual sessions. Ideal for friends at the same school taking the same subject.</p>
+      <ul class="price-includes">
+        <li>Maximum 3 students per group</li>
+        <li>Same year level and subject required</li>
+        <li>Save over $15/hr compared to individual sessions</li>
+        <li>Full group attention, not a classroom</li>
+      </ul>
+    </div>
+
+    <div class="price-card-wide">
+      <div class="price-type-label">Workshops</div>
+      <h3>Holiday Workshops</h3>
+      <div class="price-rate-row">
+        <div class="price-rate">from $85</div>
+        <div class="price-rate-unit">per student</div>
+      </div>
+      <p class="price-desc">Intensive holiday workshops priced per student. 2-hour sessions from $85, 3-hour sessions from $150. Great value for focused exam preparation over the school break.</p>
+      <ul class="price-includes">
+        <li>Scheduled during school holiday periods</li>
+        <li>Exam preparation and consolidation focus</li>
+        <li>2hr session: $85/student, 3hr session: $150/student</li>
+        <li>Enquire to register interest for upcoming dates</li>
+      </ul>
+    </div>
+
+  </div>
+
+
+</section>
+
+<!-- ══════════════════════════════════════════ WHAT'S INCLUDED -->
+<section class="section-panel">
+  <div class="section-label center">No Surprises</div>
+  <h2 class="center">WHAT'S INCLUDED AND <span class="gold">WHAT TO EXPECT</span></h2>
+  <div class="pricing-notes">
+    <div class="notes-list">
+      <div class="note-item">
+        <div class="note-icon">&#9745;</div>
+        <div class="note-text">
+          <strong>No lock-in contracts</strong>
+          <p>Book sessions as you need them. There is no minimum commitment, though most families find a regular weekly schedule delivers the best results.</p>
+        </div>
+      </div>
+      <div class="note-item">
+        <div class="note-icon">&#127968;</div>
+        <div class="note-text">
+          <strong>We come to you or connect remotely</strong>
+          <p>Tutor 2 Success does not have a fixed office. In-person sessions happen at your home or a mutually agreed location. Remote sessions via Zoom are priced the same.</p>
+        </div>
+      </div>
+      <div class="note-item">
+        <div class="note-icon">&#128172;</div>
+        <div class="note-text">
+          <strong>We are always your point of contact</strong>
+          <p>Regardless of which tutor delivers your sessions, we handle all communication. You will always have a real person to speak to.</p>
+        </div>
+      </div>
+      <div class="note-item">
+        <div class="note-icon">&#128203;</div>
+        <div class="note-text">
+          <strong>Session notes included</strong>
+          <p>After every lesson, a written summary of what was covered, homework assigned, and any flagged areas is shared with the family at no extra cost.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ BOOK TRIAL -->
+<section>
+  <div class="section-label center">Book Online</div>
+  <h2 class="center">BOOK YOUR <span class="gold">TRIAL SESSION</span></h2>
+  <p class="section-intro center">New students can sign up and book their first session directly from available times. First session is 50% off, no lock-in contract.</p>
+  <script src="https://app.tutorbird.com/Widget/v4/Widget.ashx?settings=eyJTY2hvb2xJRCI6InNjaF80bFpKUyIsIldlYnNpdGVJRCI6Indic181WEpKeiIsIldlYnNpdGVCbG9ja0lEIjoid2JiX1c2eTNKeCJ9"></script>
+</section>
+
+<!-- ══════════════════════════════════════════ FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="default.png" alt="Tutor 2 Success" style="height:38px;object-fit:contain;margin-bottom:12px;filter:brightness(0) invert(1);" />
+      <p>Quality K-12 tutoring for Wagga Wagga and regional NSW students. In-person (we come to you) and remote sessions with qualified, WWCC-verified university tutors.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Pages</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Subjects</h5>
+      <ul>
+        <li><a href="services.html">English</a></li>
+        <li><a href="services.html">Mathematics</a></li>
+        <li><a href="services.html">Science</a></li>
+        <li><a href="services.html">Business Studies</a></li>
+        <li><a href="services.html">Legal Studies</a></li>
+        <li><a href="services.html">Computing</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="contact.html">Book a Session</a></li>
+        <li><a href="contact.html">Send an Enquiry</a></li>
+        <li><a href="mailto:hello@tutor2success.com.au">hello@tutor2success.com.au</a></li>
+        <li><span style="color:rgba(255,255,255,0.4);">Wagga Wagga, NSW</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Tutor 2 Success. Wagga Wagga, NSW. All rights reserved.</span>
+    <span>K-12 Tutoring. In-person and Remote.</span>
+  </div>
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>

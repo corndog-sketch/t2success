@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact and Book – Tutor 2 Success</title>
+  <meta name="description" content="Book a tutoring session or send an enquiry to Tutor 2 Success. Wagga Wagga and regional NSW K-12 tutoring. We come to you or connect remotely." />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .form-submitted {
+      display: none; background: var(--gold-pale); border: 1px solid var(--gold);
+      border-radius: var(--radius); padding: 28px 32px; text-align: center;
+      margin-bottom: 24px;
+    }
+    .form-submitted h3 { font-family: var(--font-head); font-size: 1.4rem; letter-spacing: 1px; color: #8a6b00; margin-bottom: 8px; }
+    .form-submitted p { font-size: .9rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════ NAV -->
+<nav>
+  <a href="index.html" style="text-decoration:none;display:flex;align-items:center;">
+    <img src="default.png" alt="Tutor 2 Success Logo" style="height:50px;object-fit:contain;"
+         onerror="this.style.display='none';document.getElementById('logo-fb').style.display='flex';" />
+    <div id="logo-fb" class="logo-wrap" style="display:none;">
+      <div class="logo-icon">
+        <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13 5 L5 10 L13 15 L21 10 Z" fill="#0B173D" stroke="#0B173D" stroke-width=".5"/>
+          <path d="M7 12v5c0 2 2.5 4 6 4s6-2 6-4v-5" fill="none" stroke="#0B173D" stroke-width="1.5"/>
+          <line x1="21" y1="10" x2="21" y2="17" stroke="#0B173D" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="logo-wordmark">
+        <div class="logo-name">TUTOR 2 SUCCESS</div>
+        <div class="logo-slogan">Empowering Every Learner</div>
+      </div>
+    </div>
+  </a>
+
+  <div class="nav-links" id="nav-links">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="about.html">About</a>
+    <a href="faq.html">FAQ</a>
+  </div>
+
+  <div class="nav-actions">
+    <a href="contact.html" class="btn btn-outline" style="padding:9px 20px;font-size:.85rem;">Contact</a>
+    <a href="contact.html" class="btn btn-gold" style="padding:9px 20px;font-size:.85rem;">Book a Session</a>
+    <a href="portal.html" class="btn-portal">Parent Login</a>
+  </div>
+
+  <button type="button" class="nav-hamburger" onclick="document.getElementById('nav-links').classList.toggle('open')" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ══════════════════════════════════════════ PAGE HEADER -->
+<div class="page-header">
+  <div class="eyebrow">Get in Touch</div>
+  <h1>CONTACT <span class="gold">AND BOOK</span></h1>
+  <p>Ready to enquire or book a session? Fill in the form below and we will get back to you within 24 hours. No pressure, no obligation, just a conversation.</p>
+</div>
+
+<!-- ══════════════════════════════════════════ CONTACT SECTION -->
+<section>
+  <div class="contact-layout">
+
+    <!-- Info column -->
+    <div>
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px;">
+        <img src="headshotv2.JPG" alt="Alex Corneliusen" style="width:64px;height:64px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid var(--gold);flex-shrink:0;" />
+        <div>
+          <h3 style="font-family:var(--font-head);font-size:1.5rem;letter-spacing:1px;color:var(--text);margin-bottom:4px;">HOW TO REACH US</h3>
+          <span style="font-size:.8rem;color:var(--muted);">Alex Corneliusen, Founder</span>
+        </div>
+      </div>
+      <p style="font-size:.9rem;color:var(--muted);line-height:1.75;margin-bottom:28px;">We personally read and respond to every enquiry. The best way to get started is to fill out the form below. It helps us understand your student's needs before getting on a call.</p>
+
+      <div class="contact-detail">
+        <div class="contact-detail-icon">&#127968;</div>
+        <div class="contact-detail-text">
+          <strong>We Come to You</strong>
+          <span>Tutor 2 Success has no fixed office. In-person sessions happen at your home or a mutually agreed location in Wagga Wagga.</span>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="contact-detail-icon">&#128187;</div>
+        <div class="contact-detail-text">
+          <strong>Remote Sessions</strong>
+          <span>Available to students anywhere in regional NSW via Zoom or Google Meet.</span>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="contact-detail-icon">&#128140;</div>
+        <div class="contact-detail-text">
+          <strong>Email Us Directly</strong>
+          <span><a href="mailto:hello@tutor2success.com.au" style="color:var(--gold);">hello@tutor2success.com.au</a></span>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="contact-detail-icon">&#128336;</div>
+        <div class="contact-detail-text">
+          <strong>Response Time</strong>
+          <span>We respond to all enquiries within 24 hours, usually much faster.</span>
+        </div>
+      </div>
+
+      <div style="margin-top:32px; background:var(--gold-pale); border:1px solid var(--border); border-radius:var(--radius); padding:20px 22px;">
+        <div style="font-family:var(--font-head);font-size:.85rem;letter-spacing:1.5px;color:#8a6b00;margin-bottom:8px;">TRIAL SESSION OFFER</div>
+        <p style="font-size:.875rem;color:var(--muted);line-height:1.7;">Your first session is <strong style="color:#8a6b00;">50% off</strong>. No lock-in contract. Just mention the trial offer when you enquire and we will apply it to your first booking.</p>
+      </div>
+
+      <div style="margin-top:20px; background:var(--panel); border:1px solid var(--border); border-radius:var(--radius); padding:18px 22px;">
+        <div style="font-size:.82rem;font-weight:700;letter-spacing:.5px;color:#8a6b00;margin-bottom:6px;">REGIONS SERVED</div>
+        <p style="font-size:.84rem;color:var(--muted);line-height:1.65;">Wagga Wagga &bull; Young &bull; Griffith &bull; Albury &bull; Deniliquin &bull; Riverina and surrounding areas (remote sessions available anywhere in NSW)</p>
+      </div>
+    </div>
+
+    <!-- Form column -->
+    <div class="form-card">
+      <div style="font-family:var(--font-head);font-size:1.3rem;letter-spacing:1px;color:var(--text);margin-bottom:20px;">SEND AN ENQUIRY</div>
+      <script src="https://app.tutorbird.com/Widget/v4/Widget.ashx?settings=eyJTY2hvb2xJRCI6InNjaF80bFpKUyIsIldlYnNpdGVJRCI6Indic181WEpKeiIsIldlYnNpdGVCbG9ja0lEIjoid2JiX1c2eU5KSyJ9"></script>
+
+    </div>
+
+  </div>
+</section>
+
+<hr class="gold-divider"/>
+
+<!-- ══════════════════════════════════════════ BOOK FROM AVAILABILITY -->
+<section>
+  <div class="section-label center">Book Online</div>
+  <h2 class="center">READY TO <span class="gold">BOOK A SESSION?</span></h2>
+  <p class="section-intro center">New students can sign up and book their first lesson directly from available times below. First session is 50% off.</p>
+  <script src="https://app.tutorbird.com/Widget/v4/Widget.ashx?settings=eyJTY2hvb2xJRCI6InNjaF80bFpKUyIsIldlYnNpdGVJRCI6Indic181WEpKeiIsIldlYnNpdGVCbG9ja0lEIjoid2JiX1c2eTNKeCJ9"></script>
+</section>
+
+<!-- ══════════════════════════════════════════ FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="default.png" alt="Tutor 2 Success" style="height:38px;object-fit:contain;margin-bottom:12px;filter:brightness(0) invert(1);" />
+      <p>Quality K-12 tutoring for Wagga Wagga and regional NSW students. In-person (we come to you) and remote sessions with qualified, WWCC-verified university tutors.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Pages</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Subjects</h5>
+      <ul>
+        <li><a href="services.html">English</a></li>
+        <li><a href="services.html">Mathematics</a></li>
+        <li><a href="services.html">Science</a></li>
+        <li><a href="services.html">Business Studies</a></li>
+        <li><a href="services.html">Legal Studies</a></li>
+        <li><a href="services.html">Computing</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="contact.html">Book a Session</a></li>
+        <li><a href="contact.html">Send an Enquiry</a></li>
+        <li><a href="mailto:hello@tutor2success.com.au">hello@tutor2success.com.au</a></li>
+        <li><span style="color:rgba(255,255,255,0.4);">Wagga Wagga, NSW</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Tutor 2 Success. Wagga Wagga, NSW. All rights reserved.</span>
+    <span>K-12 Tutoring. In-person and Remote.</span>
+  </div>
+</footer>
+
+
+<script src="scripts.js"></script>
+</body>
+</html>

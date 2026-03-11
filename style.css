@@ -73,7 +73,7 @@ ul { list-style: none; }
   background: var(--gold); color: #0B173D;
   box-shadow: 0 4px 18px rgba(209,161,3,.35);
 }
-.btn-gold:hover { background: var(--gold-lt); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(209,161,3,.45); }
+.btn-gold:hover { background: var(--gold-lt); }
 .btn-outline {
   border-color: var(--gold); color: var(--gold); background: transparent;
 }
@@ -508,7 +508,7 @@ footer {
 @media (max-width: 960px) {
   .features-grid { grid-template-columns: 1fr 1fr; }
   .services-grid { grid-template-columns: 1fr; }
-  .trust-grid { grid-template-columns: 1fr 1fr; }
+  .trust-grid { grid-template-columns: 1fr 1fr 1fr; }
   .pricing-grid { grid-template-columns: 1fr; max-width: 440px; }
   .price-card.featured { transform: none; }
   .steps-grid { grid-template-columns: 1fr 1fr; }
@@ -527,7 +527,9 @@ footer {
     z-index: 99;
   }
   .nav-links.open { display: flex; }
-  .nav-actions { display: none; }
+  .nav-actions .btn-outline,
+  .nav-actions .btn-portal { display: none; }
+  .nav-actions { gap: 6px; }
   .nav-hamburger { display: flex; }
   h2 { font-size: 2.2rem; }
   .page-header h1 { font-size: 2.4rem; }

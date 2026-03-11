@@ -36,6 +36,7 @@
     .subjects-grid {
       display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
     }
+    .subject-category { min-width: 0; }
 
     .delivery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
     .delivery-card {
@@ -84,7 +85,7 @@
       .delivery-grid { grid-template-columns: 1fr; }
       .who-grid { grid-template-columns: 1fr 1fr; }
     }
-    @media (max-width: 620px) {
+    @media (max-width: 720px) {
       .subjects-grid { grid-template-columns: 1fr; }
       .who-grid { grid-template-columns: 1fr; }
     }

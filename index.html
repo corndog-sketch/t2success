@@ -122,12 +122,14 @@
       .hero { grid-template-columns: 1fr; }
       .hero-visual { display: none; }
       .hero h1 { font-size: 3rem; }
+      .hero-bullets { display: none; }
       .from-alex-layout { grid-template-columns: 1fr; gap: 36px; }
       .from-alex-photo-wrap { max-width: 400px; }
     }
     @media (max-width: 480px) {
       .hero { padding: 60px 5% 52px; }
       .hero h1 { font-size: 2.4rem; }
+      .hero p { margin-bottom: 20px; }
     }
 
     .features-section { background: var(--panel); }
@@ -229,7 +231,7 @@
     <div class="hero-eyebrow">K-12 Tutoring &nbsp;&#183;&nbsp; Wagga Wagga &amp; Regional NSW</div>
     <h1>THE LOCAL TUTOR<br/>WHO <span class="gold">COMES TO YOU</span></h1>
     <p style="font-size:.95rem;color:rgba(255,255,255,0.55);font-weight:600;letter-spacing:.5px;margin-bottom:18px;">Personalised K-12 tutoring. We handle everything personally.</p>
-    <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:32px;max-width:460px;">
+    <ul class="hero-bullets" style="list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:32px;max-width:460px;">
       <li style="display:flex;align-items:center;gap:10px;font-size:.93rem;color:rgba(255,255,255,0.82);">
         <span style="color:var(--gold);font-size:.75rem;flex-shrink:0;">&#9646;</span>
         English, Maths, Science, Business, Legal Studies, Computing and more

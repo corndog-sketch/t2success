@@ -35,10 +35,16 @@
 
     .subjects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+      grid-template-columns: 1fr;
       gap: 20px;
     }
     .subject-category { min-width: 0; }
+    @media (min-width: 600px) {
+      .subjects-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (min-width: 960px) {
+      .subjects-grid { grid-template-columns: repeat(3, 1fr); }
+    }
 
     .delivery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
     .delivery-card {

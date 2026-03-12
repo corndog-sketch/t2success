@@ -122,12 +122,14 @@
       .hero { grid-template-columns: 1fr; }
       .hero-visual { display: none; }
       .hero h1 { font-size: 3rem; }
+      .hero-bullets { display: none; }
       .from-alex-layout { grid-template-columns: 1fr; gap: 36px; }
       .from-alex-photo-wrap { max-width: 400px; }
     }
     @media (max-width: 480px) {
       .hero { padding: 60px 5% 52px; }
       .hero h1 { font-size: 2.4rem; }
+      .hero p { margin-bottom: 20px; }
     }
 
     .features-section { background: var(--panel); }
@@ -229,7 +231,7 @@
     <div class="hero-eyebrow">K-12 Tutoring &nbsp;&#183;&nbsp; Wagga Wagga &amp; Regional NSW</div>
     <h1>THE LOCAL TUTOR<br/>WHO <span class="gold">COMES TO YOU</span></h1>
     <p style="font-size:.95rem;color:rgba(255,255,255,0.55);font-weight:600;letter-spacing:.5px;margin-bottom:18px;">Personalised K-12 tutoring. We handle everything personally.</p>
-    <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:32px;max-width:460px;">
+    <ul class="hero-bullets" style="list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:32px;max-width:460px;">
       <li style="display:flex;align-items:center;gap:10px;font-size:.93rem;color:rgba(255,255,255,0.82);">
         <span style="color:var(--gold);font-size:.75rem;flex-shrink:0;">&#9646;</span>
         English, Maths, Science, Business, Legal Studies, Computing and more
@@ -324,8 +326,8 @@
     </div>
     <div class="feat-card">
       <div class="feat-icon">&#127891;</div>
-      <h3>HIGH-ACHIEVING UNI TUTORS</h3>
-      <p>All sub-tutors are high-achieving local university students, personally selected for their subject knowledge and communication ability. Every one holds a current Working With Children Check.</p>
+      <h3>EXPERIENCED AND QUALIFIED</h3>
+      <p>Alex brings years of K-12 tutoring experience across the Riverina, with firsthand knowledge of the NSW curriculum and what local students actually need. Every session is delivered personally by Alex.</p>
     </div>
     <div class="feat-card">
       <div class="feat-icon">&#9993;</div>
@@ -351,7 +353,7 @@
     <div class="trust-card">
       <div class="trust-icon">&#10003;</div>
       <h3>WWCC VERIFIED</h3>
-      <p>Every tutor, Alex and all sub-tutors, holds a current Working With Children Check. We do not make exceptions, and we can provide documentation on request.</p>
+      <p>Alex holds a current Working With Children Check. We do not make exceptions, and documentation is available on request.</p>
     </div>
     <div class="trust-card">
       <div class="trust-icon">&#128172;</div>
@@ -407,7 +409,7 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <img src="default.png" alt="Tutor 2 Success" style="height:38px;object-fit:contain;margin-bottom:12px;filter:brightness(0) invert(1);" />
-      <p>Quality K-12 tutoring for Wagga Wagga and regional NSW students. In-person (we come to you) and remote sessions with qualified, WWCC-verified university tutors.</p>
+      <p>Quality K-12 tutoring for Wagga Wagga and regional NSW students. In-person (we come to you) and remote sessions with Alex, your WWCC-verified tutor.</p>
     </div>
     <div class="footer-col">
       <h5>Pages</h5>
